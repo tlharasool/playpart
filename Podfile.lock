@@ -1,0 +1,20 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.6)
+  - SwiftKeychainWrapper (4.0.1)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - SwiftKeychainWrapper
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - SwiftKeychainWrapper
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
+
+PODFILE CHECKSUM: 729815bac1be639bb3e36be82ce7de7f5f91de4e
+
+COCOAPODS: 1.11.2
