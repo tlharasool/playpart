@@ -159,7 +159,6 @@ class LoginViewController: UIViewController{
     //check either pass and email matches
     func backEndConfigration(loader  : UIAlertController)
     {
-            
         let dataDictonary = ["email": emailField.text, "password": passwordFiled.text]
         apiHandler.LogInUser(parameters: dataDictonary, failure:{msg in
       
@@ -178,16 +177,10 @@ class LoginViewController: UIViewController{
             DispatchQueue.main.async {
                 stopLoader(loader: loader, completionHandler: { [self] in
                 //    popScreenAfterLogginAndSignUp()
-                    
                     let sb = UIStoryboard(name: "Main", bundle: nil)
                     let vc = sb.instantiateViewController(identifier: "UITabBarController")
                     vc.modalPresentationStyle = .fullScreen
                     self.present(vc, animated: true, completion: nil)
-                    
-                    /*let alert = UIAlertController(title: "SuccessFull", message: msg , preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Dismiss",style: .cancel,handler: {action in}))
-                    self.present(alert, animated: true)
-                    print("sucessfull alert apperas")*/
                 })
           
             }
