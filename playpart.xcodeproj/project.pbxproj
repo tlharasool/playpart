@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07FAA6C12708399A0027C816 /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAA6C02708399A0027C816 /* AccountTableViewController.swift */; };
+		07FAA6C3270839C40027C816 /* PrivacyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAA6C2270839C40027C816 /* PrivacyTableViewController.swift */; };
+		07FAA6C5270839F10027C816 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAA6C4270839F10027C816 /* SetPasswordViewController.swift */; };
+		07FAA6C727083A3A0027C816 /* SetNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAA6C627083A3A0027C816 /* SetNameViewController.swift */; };
 		53A52841680A0CFCE964E4F1 /* Pods_playpart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D906B694EC8694A064EF127D /* Pods_playpart.framework */; };
 		BC813E93270304D10051E577 /* ASVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E90270304D10051E577 /* ASVideoController.swift */; };
 		BC813E94270304D10051E577 /* ASVideoLayerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E91270304D10051E577 /* ASVideoLayerObject.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07FAA6C02708399A0027C816 /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
+		07FAA6C2270839C40027C816 /* PrivacyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyTableViewController.swift; sourceTree = "<group>"; };
+		07FAA6C4270839F10027C816 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
+		07FAA6C627083A3A0027C816 /* SetNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNameViewController.swift; sourceTree = "<group>"; };
 		451C9B6749D11D6902220E71 /* Pods-playpart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playpart.release.xcconfig"; path = "Target Support Files/Pods-playpart/Pods-playpart.release.xcconfig"; sourceTree = "<group>"; };
 		BC813E90270304D10051E577 /* ASVideoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASVideoController.swift; sourceTree = "<group>"; };
 		BC813E91270304D10051E577 /* ASVideoLayerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASVideoLayerObject.swift; sourceTree = "<group>"; };
@@ -121,6 +129,10 @@
 				BC813E96270305160051E577 /* VideoListTableViewController.swift */,
 				BC813EA5270306D00051E577 /* ShotTableViewCell.swift */,
 				BC813EA3270306C90051E577 /* ShotTableViewCell.xib */,
+				07FAA6C02708399A0027C816 /* AccountTableViewController.swift */,
+				07FAA6C2270839C40027C816 /* PrivacyTableViewController.swift */,
+				07FAA6C4270839F10027C816 /* SetPasswordViewController.swift */,
+				07FAA6C627083A3A0027C816 /* SetNameViewController.swift */,
 			);
 			path = AuthViewController;
 			sourceTree = "<group>";
@@ -343,10 +355,13 @@
 				E9C1B74626EA094E0055885B /* ViewController.swift in Sources */,
 				E9C1B76826EA39370055885B /* TextfieldHelper.swift in Sources */,
 				BC813EA6270306D00051E577 /* ShotTableViewCell.swift in Sources */,
+				07FAA6C5270839F10027C816 /* SetPasswordViewController.swift in Sources */,
 				E90B487426F0DC2200D6596C /* LoadingView.swift in Sources */,
+				07FAA6C727083A3A0027C816 /* SetNameViewController.swift in Sources */,
 				BC813E95270304D10051E577 /* ASvideoPlayerController.swift in Sources */,
 				E9C1B74226EA094E0055885B /* AppDelegate.swift in Sources */,
 				E9C1B74426EA094E0055885B /* SceneDelegate.swift in Sources */,
+				07FAA6C12708399A0027C816 /* AccountTableViewController.swift in Sources */,
 				E961C0E026EF1E5E00C01F1E /* UISelectionViewController.swift in Sources */,
 				E9891E3B26EB3AB90015A43A /* UITextFieldLeftView.swift in Sources */,
 				BC813E94270304D10051E577 /* ASVideoLayerObject.swift in Sources */,
@@ -356,6 +371,7 @@
 				BC813EA8270314C20051E577 /* StaticaTableView.swift in Sources */,
 				BC813E97270305160051E577 /* VideoListTableViewController.swift in Sources */,
 				E9A8B6EA26EF717500A77F56 /* Models.swift in Sources */,
+				07FAA6C3270839C40027C816 /* PrivacyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
