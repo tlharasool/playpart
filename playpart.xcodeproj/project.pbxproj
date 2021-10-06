@@ -31,6 +31,7 @@
 		E9C1B76126EA2D4E0055885B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C1B76026EA2D4D0055885B /* Assets.xcassets */; };
 		E9C1B76426EA30B30055885B /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C1B76326EA30B30055885B /* ColorHelper.swift */; };
 		E9C1B76826EA39370055885B /* TextfieldHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C1B76726EA39370055885B /* TextfieldHelper.swift */; };
+		E9C89A4D270DABEF0066BB4B /* DescriptionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C89A4C270DABEF0066BB4B /* DescriptionTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		E9C1B76026EA2D4D0055885B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9C1B76326EA30B30055885B /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		E9C1B76726EA39370055885B /* TextfieldHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldHelper.swift; sourceTree = "<group>"; };
+		E9C89A4C270DABEF0066BB4B /* DescriptionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextField.swift; sourceTree = "<group>"; };
 		F16C29823B71519FE18C1640 /* Pods-playpart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playpart.debug.xcconfig"; path = "Target Support Files/Pods-playpart/Pods-playpart.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			children = (
 				E9C1B76726EA39370055885B /* TextfieldHelper.swift */,
 				E9891E3A26EB3AB90015A43A /* UITextFieldLeftView.swift */,
+				E9C89A4C270DABEF0066BB4B /* DescriptionTextField.swift */,
 			);
 			path = textFieldHelper;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				BC813EA6270306D00051E577 /* ShotTableViewCell.swift in Sources */,
 				E90B487426F0DC2200D6596C /* LoadingView.swift in Sources */,
 				BC813E95270304D10051E577 /* ASvideoPlayerController.swift in Sources */,
+				E9C89A4D270DABEF0066BB4B /* DescriptionTextField.swift in Sources */,
 				E9C1B74226EA094E0055885B /* AppDelegate.swift in Sources */,
 				E9C1B74426EA094E0055885B /* SceneDelegate.swift in Sources */,
 				E961C0E026EF1E5E00C01F1E /* UISelectionViewController.swift in Sources */,
