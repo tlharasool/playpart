@@ -357,10 +357,10 @@ class UISelectionViewController: UIViewController {
     
     
     @IBAction func actionOnTap(_ sender : UITapGestureRecognizer){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(identifier: "UITabBarController")
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        
+        let vc = HomeTabBarController.instantiateViewController()
+        CustomUserDefaults.shared.set(true, key: .isLogin)
+        UIApplication.shared.setRootVC(vc)
     }
     
 }

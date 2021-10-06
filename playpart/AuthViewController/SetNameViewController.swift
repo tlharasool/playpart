@@ -10,18 +10,26 @@ import UIKit
 
 class SetNameViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var SetNameField: UITextField!
     private let primaryColor = AppColor.primaryColor
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFields()
         configureTapGesture()
+        backBtn.addTarget(self, action: #selector(actionOnBack(_:)), for: .touchUpInside)
     }
     @IBAction func LoginBtn(_ sender: UIButton) {
         view.endEditing(true)
         checkEntities()
     }
+    @objc func actionOnBack(_ sender : UIButton){
+        self.navigationController?.popController()
+    }
 }
+
 extension SetNameViewController{
     private func configureTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handelTap))
@@ -31,6 +39,7 @@ extension SetNameViewController{
         view.endEditing(true)
     }
 }
+
 extension SetNameViewController{
     private func configureTextFields(){
         SetNameField.delegate = self
@@ -81,6 +90,12 @@ extension SetNameViewController{
         return NameTest.evaluate(with: emailID)
     }
 }
+
+extension SetNameViewController : StoryboardInitializable{
+
+    static var storyboardName: UIStoryboard.Storyboard { return .main}
+}
+
 extension SetNameViewController{
     
     private func setInserNameTxtFldProperties(){

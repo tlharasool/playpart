@@ -8,6 +8,7 @@
 //UISelectionViewController
 import UIKit
 import SwiftKeychainWrapper
+
 class LoginViewController: UIViewController{
     
     @IBOutlet weak var emailField    : UITextField!
@@ -164,7 +165,6 @@ class LoginViewController: UIViewController{
       
             DispatchQueue.main.async {
                 stopLoader(loader: loader, completionHandler:{
-                    
                     let alert = UIAlertController(title: "error", message: msg , preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Dismiss",style: .cancel,handler: {action in}))
                     self.present(alert, animated: true)
@@ -177,10 +177,9 @@ class LoginViewController: UIViewController{
             DispatchQueue.main.async {
                 stopLoader(loader: loader, completionHandler: { [self] in
                 //    popScreenAfterLogginAndSignUp()
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = sb.instantiateViewController(identifier: "UITabBarController")
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
+                    let vc = HomeTabBarController.instantiateViewController()
+                    UIApplication.shared.setRootVC(vc)
+                    
                 })
           
             }
@@ -242,4 +241,9 @@ func stopLoader(loader : UIAlertController, completionHandler : @escaping ()->()
     }
     
     
+}
+
+extension LoginViewController : StoryboardInitializable{
+
+    static var storyboardName: UIStoryboard.Storyboard{return .main}
 }

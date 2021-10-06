@@ -10,6 +10,7 @@ import UIKit
 
 class SetPasswordViewController: UIViewController {
     
+    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var PasswordField: UITextField!
     @IBOutlet weak var ConfirmPasswordField: UITextField!
     private let primaryColor = AppColor.primaryColor
@@ -17,6 +18,7 @@ class SetPasswordViewController: UIViewController {
         super.viewDidLoad()
         configureTextFields()
         configureTapGesture()
+        backBtn.addTarget(self, action: #selector(actionOnBack(_:)), for: .touchUpInside)
     }
     @IBAction func LoginBtn(_ sender: UIButton) {
         view.endEditing(true)
@@ -36,6 +38,10 @@ extension SetPasswordViewController{
     private func configureTextFields(){
         PasswordField.delegate = self
         ConfirmPasswordField.delegate = self
+    }
+    
+    @objc func actionOnBack(_ sender : UIButton){
+        self.navigationController?.popController()
     }
 }
 extension SetPasswordViewController{
@@ -117,3 +123,8 @@ extension SetPasswordViewController{
     }
 }
 
+extension SetPasswordViewController : StoryboardInitializable{
+    static var storyboardName: UIStoryboard.Storyboard{
+        return .main
+    }
+}
