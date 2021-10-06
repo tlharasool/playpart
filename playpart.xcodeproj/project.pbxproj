@@ -12,6 +12,13 @@
 		07FAA6C5270839F10027C816 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAA6C4270839F10027C816 /* SetPasswordViewController.swift */; };
 		07FAA6C727083A3A0027C816 /* SetNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAA6C627083A3A0027C816 /* SetNameViewController.swift */; };
 		53A52841680A0CFCE964E4F1 /* Pods_playpart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D906B694EC8694A064EF127D /* Pods_playpart.framework */; };
+		BC509DDE270D838A004FA272 /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC509DDD270D838A004FA272 /* UIApplication + Extension.swift */; };
+		BC509DE0270D87A3004FA272 /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC509DDF270D87A3004FA272 /* View + Extension.swift */; };
+		BC509DE2270D87B5004FA272 /* Navigation + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC509DE1270D87B5004FA272 /* Navigation + Extension.swift */; };
+		BC509DE6270D8A1C004FA272 /* StoryboardIntialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC509DE5270D8A1C004FA272 /* StoryboardIntialize.swift */; };
+		BC509DE8270D8A4B004FA272 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC509DE7270D8A4B004FA272 /* Home.storyboard */; };
+		BC509DEA270D8B64004FA272 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC509DE9270D8B64004FA272 /* HomeTabBarController.swift */; };
+		BC509DEC270D90C8004FA272 /* PersonalInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC509DEB270D90C8004FA272 /* PersonalInfoTableViewController.swift */; };
 		BC813E93270304D10051E577 /* ASVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E90270304D10051E577 /* ASVideoController.swift */; };
 		BC813E94270304D10051E577 /* ASVideoLayerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E91270304D10051E577 /* ASVideoLayerObject.swift */; };
 		BC813E95270304D10051E577 /* ASvideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E92270304D10051E577 /* ASvideoPlayerController.swift */; };
@@ -19,6 +26,9 @@
 		BC813EA4270306C90051E577 /* ShotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC813EA3270306C90051E577 /* ShotTableViewCell.xib */; };
 		BC813EA6270306D00051E577 /* ShotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813EA5270306D00051E577 /* ShotTableViewCell.swift */; };
 		BC813EA8270314C20051E577 /* StaticaTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813EA7270314C20051E577 /* StaticaTableView.swift */; };
+		BCB65BF0270DC4FA0085F315 /* CamerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB65BEF270DC4FA0085F315 /* CamerViewController.swift */; };
+		BCB65BF2270DCACA0085F315 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB65BF1270DCACA0085F315 /* Record.storyboard */; };
+		BCB65BF4270DCAEC0085F315 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB65BF3270DCAEC0085F315 /* RecordViewController.swift */; };
 		E90B487426F0DC2200D6596C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B487326F0DC2200D6596C /* LoadingView.swift */; };
 		E961C0E026EF1E5E00C01F1E /* UISelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E961C0DF26EF1E5E00C01F1E /* UISelectionViewController.swift */; };
 		E961C0E226EF4EF200C01F1E /* API_Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E961C0E126EF4EF200C01F1E /* API_Handler.swift */; };
@@ -43,6 +53,13 @@
 		07FAA6C4270839F10027C816 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
 		07FAA6C627083A3A0027C816 /* SetNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNameViewController.swift; sourceTree = "<group>"; };
 		451C9B6749D11D6902220E71 /* Pods-playpart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playpart.release.xcconfig"; path = "Target Support Files/Pods-playpart/Pods-playpart.release.xcconfig"; sourceTree = "<group>"; };
+		BC509DDD270D838A004FA272 /* UIApplication + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
+		BC509DDF270D87A3004FA272 /* View + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
+		BC509DE1270D87B5004FA272 /* Navigation + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Navigation + Extension.swift"; sourceTree = "<group>"; };
+		BC509DE5270D8A1C004FA272 /* StoryboardIntialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIntialize.swift; sourceTree = "<group>"; };
+		BC509DE7270D8A4B004FA272 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		BC509DE9270D8B64004FA272 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		BC509DEB270D90C8004FA272 /* PersonalInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewController.swift; sourceTree = "<group>"; };
 		BC813E90270304D10051E577 /* ASVideoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASVideoController.swift; sourceTree = "<group>"; };
 		BC813E91270304D10051E577 /* ASVideoLayerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASVideoLayerObject.swift; sourceTree = "<group>"; };
 		BC813E92270304D10051E577 /* ASvideoPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASvideoPlayerController.swift; sourceTree = "<group>"; };
@@ -50,6 +67,9 @@
 		BC813EA3270306C90051E577 /* ShotTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotTableViewCell.xib; sourceTree = "<group>"; };
 		BC813EA5270306D00051E577 /* ShotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotTableViewCell.swift; sourceTree = "<group>"; };
 		BC813EA7270314C20051E577 /* StaticaTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticaTableView.swift; sourceTree = "<group>"; };
+		BCB65BEF270DC4FA0085F315 /* CamerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerViewController.swift; sourceTree = "<group>"; };
+		BCB65BF1270DCACA0085F315 /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
+		BCB65BF3270DCAEC0085F315 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		D906B694EC8694A064EF127D /* Pods_playpart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playpart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90B487326F0DC2200D6596C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		E961C0DF26EF1E5E00C01F1E /* UISelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISelectionViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +153,7 @@
 				07FAA6C2270839C40027C816 /* PrivacyTableViewController.swift */,
 				07FAA6C4270839F10027C816 /* SetPasswordViewController.swift */,
 				07FAA6C627083A3A0027C816 /* SetNameViewController.swift */,
+				BCB65BF3270DCAEC0085F315 /* RecordViewController.swift */,
 			);
 			path = AuthViewController;
 			sourceTree = "<group>";
@@ -208,8 +229,11 @@
 				BC813E8C2702FDC40051E577 /* Api_Call_Handler */,
 				BC813E8B2702FDBC0051E577 /* Api_Models */,
 				E9C1B74726EA094E0055885B /* Main.storyboard */,
+				BC509DE7270D8A4B004FA272 /* Home.storyboard */,
+				BCB65BF1270DCACA0085F315 /* Record.storyboard */,
 				BC813E892702FD110051E577 /* itemCollectionCellXIB */,
 				E9C1B76026EA2D4D0055885B /* Assets.xcassets */,
+				BCB65BEF270DC4FA0085F315 /* CamerViewController.swift */,
 				E9C1B74C26EA09500055885B /* LaunchScreen.storyboard */,
 				E9C1B74F26EA09500055885B /* Info.plist */,
 			);
@@ -227,9 +251,15 @@
 		E9C1B76226EA308D0055885B /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
+				BC509DE5270D8A1C004FA272 /* StoryboardIntialize.swift */,
+				BC509DDF270D87A3004FA272 /* View + Extension.swift */,
+				BC509DDD270D838A004FA272 /* UIApplication + Extension.swift */,
+				BC509DE1270D87B5004FA272 /* Navigation + Extension.swift */,
 				BC813E8A2702FD370051E577 /* activityIndicatorView */,
 				BC813E872702FCC40051E577 /* textFieldHelper */,
 				E9C1B76326EA30B30055885B /* ColorHelper.swift */,
+				BC509DE9270D8B64004FA272 /* HomeTabBarController.swift */,
+				BC509DEB270D90C8004FA272 /* PersonalInfoTableViewController.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -298,7 +328,9 @@
 				E9981B2F26F356C400F429D4 /* ItemCollectionViewCell.xib in Resources */,
 				E9C1B74926EA094E0055885B /* Main.storyboard in Resources */,
 				E9C1B76126EA2D4E0055885B /* Assets.xcassets in Resources */,
+				BC509DE8270D8A4B004FA272 /* Home.storyboard in Resources */,
 				BC813EA4270306C90051E577 /* ShotTableViewCell.xib in Resources */,
+				BCB65BF2270DCACA0085F315 /* Record.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,16 +387,24 @@
 				E9C1B74626EA094E0055885B /* ViewController.swift in Sources */,
 				E9C1B76826EA39370055885B /* TextfieldHelper.swift in Sources */,
 				BC813EA6270306D00051E577 /* ShotTableViewCell.swift in Sources */,
+				BC509DEA270D8B64004FA272 /* HomeTabBarController.swift in Sources */,
+				BC509DE6270D8A1C004FA272 /* StoryboardIntialize.swift in Sources */,
 				07FAA6C5270839F10027C816 /* SetPasswordViewController.swift in Sources */,
 				E90B487426F0DC2200D6596C /* LoadingView.swift in Sources */,
+				BC509DDE270D838A004FA272 /* UIApplication + Extension.swift in Sources */,
+				BCB65BF4270DCAEC0085F315 /* RecordViewController.swift in Sources */,
+				BC509DE2270D87B5004FA272 /* Navigation + Extension.swift in Sources */,
 				07FAA6C727083A3A0027C816 /* SetNameViewController.swift in Sources */,
 				BC813E95270304D10051E577 /* ASvideoPlayerController.swift in Sources */,
 				E9C1B74226EA094E0055885B /* AppDelegate.swift in Sources */,
+				BC509DEC270D90C8004FA272 /* PersonalInfoTableViewController.swift in Sources */,
 				E9C1B74426EA094E0055885B /* SceneDelegate.swift in Sources */,
 				07FAA6C12708399A0027C816 /* AccountTableViewController.swift in Sources */,
 				E961C0E026EF1E5E00C01F1E /* UISelectionViewController.swift in Sources */,
 				E9891E3B26EB3AB90015A43A /* UITextFieldLeftView.swift in Sources */,
 				BC813E94270304D10051E577 /* ASVideoLayerObject.swift in Sources */,
+				BCB65BF0270DC4FA0085F315 /* CamerViewController.swift in Sources */,
+				BC509DE0270D87A3004FA272 /* View + Extension.swift in Sources */,
 				E9C1B76426EA30B30055885B /* ColorHelper.swift in Sources */,
 				BC813E93270304D10051E577 /* ASVideoController.swift in Sources */,
 				E9981B3326F49E4000F429D4 /* LoginViewController.swift in Sources */,

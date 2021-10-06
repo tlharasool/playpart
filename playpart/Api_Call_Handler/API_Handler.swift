@@ -8,6 +8,12 @@
 import Foundation
 import SwiftUI
 import SwiftKeychainWrapper
+
+enum AppKey : String{
+    case accessToken = "accessTokenKey"
+    var value : String {return rawValue}
+}
+
 struct APIURL{
     //"https://localhost:3000/api/v1/"
     // "https://app.playpart.xyz/api/v1/"
@@ -132,15 +138,14 @@ extension API_Handler{
                         request.timeoutInterval = 60
                         print("The JSON is here")
                         print(json)
-                        let userModel = UserModel(json)
+          
                         let serverModel = ServerResponseModel(json)
                         let user = UserModel(json)
-                        let accessToken = user.meta.token as? String
-                        let userID = user.user.id
-                        
+                        let accessToken = user.meta.token
+                        CustomUserDefaults.shared.set(true, key: .isLogin)
                         print("Access Token => \(accessToken)")
-                        let saveAccessToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "sccessToken")
-                        let UserId =
+                        let saveAccessToken: Bool = KeychainWrapper.standard.set(accessToken, forKey: AppKey.accessToken.value)
+
                         print("Access Token => \(saveAccessToken)")
                         
                         if serverModel.message.isEmpty
@@ -181,3 +186,53 @@ extension API_Handler{
  if (accessToken?.isEmpty)!{
  print("Request doesnot successfully perform")
  }*/
+
+
+class CustomUserDefaults {
+    // define all keys needed
+    enum DefaultsKey: String, CaseIterable {
+        case name
+        case email
+        case isUserLogin
+        case userLevel
+        case isLogin
+    }
+    static let shared = CustomUserDefaults()
+    private let defaults = UserDefaults.standard
+
+    init() {}
+    // to set value using pre-defined key
+    func set(_ value: Any?, key: DefaultsKey) {
+        defaults.setValue(value, forKey: key.rawValue)
+    }
+    // get value using pre-defined key
+    func get(key: DefaultsKey) -> Any? {
+        return defaults.value(forKey: key.rawValue)
+    }
+    // check value if exist or nil
+    func hasValue(key: DefaultsKey) -> Bool {
+        return defaults.value(forKey: key.rawValue) != nil
+    }
+    // remove all stored values
+    func removeAll() {
+        for key in DefaultsKey.allCases {
+            defaults.removeObject(forKey: key.rawValue)
+        }
+    }
+}
+
+extension UserDefaults {
+  func setCodable<T: Codable>(_ value: T, forKey key: String) {
+    guard let data = try? JSONEncoder().encode(value) else {
+      fatalError("Cannot create a json representation of \(value)")
+    }
+    self.set(data, forKey: key)
+  }
+
+  func codable<T: Codable>(forKey key: String) -> T? {
+    guard let data = self.data(forKey: key) else {
+      return nil
+    }
+    return try? JSONDecoder().decode(T.self, from: data)
+  }
+}
