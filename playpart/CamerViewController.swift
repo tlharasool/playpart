@@ -54,13 +54,16 @@ class CamerViewController : UIViewController, StoryboardInitializable, AVCapture
                 previewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
                 self.view.layer.addSublayer(previewLayer!)
                 
-                captureSession!.startRunning()
+              
             }
         }
         
     
     }
     
+    func startCameraSession(){
+        captureSession!.startRunning()
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         previewLayer!.frame = self.view.bounds
@@ -78,6 +81,7 @@ class CamerViewController : UIViewController, StoryboardInitializable, AVCapture
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         super.viewWillDisappear(animated)
+        captureSession!.stopRunning()
     }
     
     override func didReceiveMemoryWarning() {

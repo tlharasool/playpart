@@ -62,6 +62,8 @@ class VideoListTableViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("View did dissape")
         player?.pause()
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {

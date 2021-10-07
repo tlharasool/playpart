@@ -22,13 +22,13 @@ extension HomeTabBarController : UITabBarControllerDelegate{
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
 
-        if let tabTag = tabBarController.tabBar.selectedItem?.tag, tabTag == 1{
-            let vc = RecordViewController.instantiateViewController()
-            let nav = UINavigationController(rootViewController: vc)
-            nav.modalPresentationStyle = .overCurrentContext
-            self.present(nav, animated: true, completion: nil)
-            return false
-        }
+//        if let tabTag = tabBarController.tabBar.selectedItem?.tag, tabTag == 1{
+//            let vc = RecordViewController.instantiateViewController()
+//            let nav = UINavigationController(rootViewController: vc)
+//            nav.modalPresentationStyle = .overCurrentContext
+//            self.present(nav, animated: true, completion: nil)
+//            return false
+//        }
         return true
     }
     

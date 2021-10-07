@@ -1,20 +1,24 @@
 PODS:
   - IQKeyboardManagerSwift (6.5.6)
+  - LongPressRecordButton (1.5.0)
   - SwiftKeychainWrapper (4.0.1)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - LongPressRecordButton
   - SwiftKeychainWrapper
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManagerSwift
+    - LongPressRecordButton
     - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  LongPressRecordButton: 5db73b859708bbe86edb4e10f1a1eea9a6d9adb7
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
 
-PODFILE CHECKSUM: 729815bac1be639bb3e36be82ce7de7f5f91de4e
+PODFILE CHECKSUM: 275b8cb55e66e53cbd4cf1d9c6f3ecc9a88d61f7
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.10.2

@@ -5,10 +5,8 @@ use_frameworks!
 target 'playpart' do
   # Comment the next line if you don't want to use dynamic frameworks
   
-
- pod 'SwiftKeychainWrapper'
-
-  # Pods for playpart
-	pod 'IQKeyboardManagerSwift'
+pod 'SwiftKeychainWrapper'
+pod 'IQKeyboardManagerSwift'
+pod 'LongPressRecordButton'
 
 end
