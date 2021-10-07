@@ -7,60 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		033BBD6ABAE3F071C63B0EF059A9D102 /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 81D5872E52BA7CE5A8EEDE66FB47C605 /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		102F4487BC4ADC3C2B56A0470E0A9468 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1415134EED4F40F66F5419CB896EC158 /* IQKeyboardManagerConstantsInternal.swift */; };
-		1457C240AAD1FBEA8CAB3F363B07F86C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		2358B57B83BE526AED64799C6892B2CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */; };
-		259D6FC80BCFE785471F743B1F533970 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5478DC07A270CABBFEBEBBEF5D72713 /* IQNSArray+Sort.swift */; };
-		2A6B7A988B5C210E8156607BAFCDC8D5 /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C071CA6F2FC2702CEB9EADC022EB2C51 /* SwiftKeychainWrapper-dummy.m */; };
-		33483C1C427390BED308CBAB3EEEE277 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */; };
-		335A29DBDDB52A6CE0FAE4744BC20446 /* Pods-playpart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 269DEA61DED8D40D97AA4E85D0B2EF8C /* Pods-playpart-dummy.m */; };
-		38EE0727B33503FD20E1363988E46AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D60AC13D33197690A05C641925DDDA /* UIKit.framework */; };
-		3E70705D8813722E2EFC41A92149AF77 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A288A520A7AAFAE43CEF91F930BDE2 /* KeychainWrapper.swift */; };
-		3F091C427A3E96117C902E8EA143729E /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78CDA7D44DBE43D710F5179DBF646DC /* IQKeyboardManager.swift */; };
-		3F3296FB6A78A8E4DE96729AF2E3BDAB /* KeychainWrapperSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608555F4551F403644CCFDAA2FF001D /* KeychainWrapperSubscript.swift */; };
-		4737103B10A1C40C5301D0512B9310E4 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D58446896023ACEFDABC3C3D40FCFD /* IQKeyboardReturnKeyHandler.swift */; };
-		4C069FA7FAA45154DA92CF5DF3BCDCA9 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A568DF7477F0643E78368139CC7E9E2A /* IQUITextFieldView+Additions.swift */; };
-		4F0CF2AD58CF0D08BC090E7AF0DD63D7 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03692B9F0716A2766B2298A6491C3128 /* IQInvocation.swift */; };
-		5044FEAEF09468B6964F9F37A1F1F45C /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEAEA088BA8CC26D3A035AD78B1477E /* IQPreviousNextView.swift */; };
-		62A85277D0462C43B80A05E8822794BB /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBC0624B11055D5247953F1DCA81BC6 /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74341DA37F4B926FDF4CB2599CAC547A /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FB835F2A1CF4B8CB95A0624215189 /* IQUIViewController+Additions.swift */; };
-		7467EBB8E94142D937F5AB6144511A01 /* LongPressRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF54512C1FB4AB86A33BC988BF9E7 /* LongPressRecordButton.swift */; };
-		7FB3576FD619DD256294BAD7E5F83CBE /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74999B6D41ECD346D4EB4BA0C1F742A /* IQTextView.swift */; };
-		822CBF05D5F67B3FA5A678590D55F3EF /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B320D8A3BD624E9F8FEEBD1E464918 /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B439A47AA5FDEF67AD63BDDB808AC5A /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDBD160B16B7BFEFBA0906B05952432 /* IQUIView+Hierarchy.swift */; };
-		97FE0B28D3F5D74B22EA9665F5DDC577 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		980E5594F8DBCE362764AEDC2F086E36 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94296528B6BDAC53AD7FAFB4AA7939B /* IQToolbar.swift */; };
-		ACFFA0384264D2A9405D840DE7FD86C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		AE3B246482DCD60BA846EA3CE983A1FB /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9CBBC6712BC4DF2ACF0AC6CF81503 /* IQUIView+IQKeyboardToolbar.swift */; };
-		B98378C55379E1B92897F11A22E38443 /* IQKeyboardManagerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3735778FA5DC668A1E14B9558632A664 /* IQKeyboardManagerSwift-dummy.m */; };
-		C04C5F1F1D6B337F87E157B55A747E41 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AC80529A93338769B1DA08637061E /* IQKeyboardManagerConstants.swift */; };
-		C0EB3776478AB80676E488BC9C9CDA3C /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C65CC400421BDBF239F58BCBD31DEE7 /* IQUIScrollView+Additions.swift */; };
-		C35DCE97EB77150C41E735DB57BD6616 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359E195967240DCDA599E8D335FE8C7B /* IQTitleBarButtonItem.swift */; };
-		DD4B9BAD914BCB13241C9BDB823FAB17 /* LongPressRecordButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70AA74859251DF54FC7BFEEDC90CF7 /* LongPressRecordButton-dummy.m */; };
-		DDE417BA9D13D2BB98316DF0512A1944 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D35C66FF48E69CFC05BE29D2F179DC /* IQBarButtonItem.swift */; };
-		DED3423BDC478CFFCD1B2E9A90C22BFB /* LongPressRecordButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2FBC1EE3D3225600877D5848D2533AF /* LongPressRecordButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E25FA6BE9FF11A3E7AA043EC5C214085 /* Pods-playpart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A74F2A799DAFDAE00FEB1DD963159E77 /* Pods-playpart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEF066616EFE6EBC57541C1B92C6770A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		FA6FACF8380230654339AB395C6B53CF /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6184842F7B7EA39C1017108F1BDA2ECD /* KeychainItemAccessibility.swift */; };
+		0272D6846A167EEC137A317C66834826 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		044E4EAF3671A3ADE80BAF4B67A94100 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1415134EED4F40F66F5419CB896EC158 /* IQKeyboardManagerConstantsInternal.swift */; };
+		0EDB6F2AFCFE8CFAE35446A388476550 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03692B9F0716A2766B2298A6491C3128 /* IQInvocation.swift */; };
+		16AB46E026E28502031BBD49766A5BB0 /* LongPressRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF54512C1FB4AB86A33BC988BF9E7 /* LongPressRecordButton.swift */; };
+		17F11791E50F22F1D757EE64E71A38E0 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74999B6D41ECD346D4EB4BA0C1F742A /* IQTextView.swift */; };
+		19DF6A30FC3FD0E23E7B81972036F4DE /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBC0624B11055D5247953F1DCA81BC6 /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22DE2EE5C678595CE3559EC9DD4514E9 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359E195967240DCDA599E8D335FE8C7B /* IQTitleBarButtonItem.swift */; };
+		2C3FBDBB0815930AE6D237D3132F7AB5 /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C071CA6F2FC2702CEB9EADC022EB2C51 /* SwiftKeychainWrapper-dummy.m */; };
+		2DD2A44F4FD88FC7541A5A9CDB746688 /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 81D5872E52BA7CE5A8EEDE66FB47C605 /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C730938D46EFDD5000EC8D9632CE44C /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5478DC07A270CABBFEBEBBEF5D72713 /* IQNSArray+Sort.swift */; };
+		3DAB9B8ACA346601215FD9821E78A091 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */; };
+		43B30E783E42BA904D2C0CAD7795AF10 /* LongPressRecordButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2FBC1EE3D3225600877D5848D2533AF /* LongPressRecordButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D5C42CA295C8D267E66102ACBC81E55 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9CBBC6712BC4DF2ACF0AC6CF81503 /* IQUIView+IQKeyboardToolbar.swift */; };
+		4D5CAB203E46FDEFC5FF48A820B5CA43 /* KeychainWrapperSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608555F4551F403644CCFDAA2FF001D /* KeychainWrapperSubscript.swift */; };
+		62D6540648BB5B2733C840BA8CCB65B9 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDBD160B16B7BFEFBA0906B05952432 /* IQUIView+Hierarchy.swift */; };
+		6732C6F2ECEDB38E727EB1FD50B84184 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEAEA088BA8CC26D3A035AD78B1477E /* IQPreviousNextView.swift */; };
+		68F2802B0DDAF745794BC0BB1127C3BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		7F355D21946C6C9048D02ADAB74915FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */; };
+		802859A858E7FD17EF7FA3546E7B4792 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D58446896023ACEFDABC3C3D40FCFD /* IQKeyboardReturnKeyHandler.swift */; };
+		8318D6C9E6438101346A88A9FE020318 /* LongPressRecordButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70AA74859251DF54FC7BFEEDC90CF7 /* LongPressRecordButton-dummy.m */; };
+		8BB57FC2CDE9C6DFA0CEF1280BC4415E /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A568DF7477F0643E78368139CC7E9E2A /* IQUITextFieldView+Additions.swift */; };
+		931182EE544BE21CDA68DCAFF537045B /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C65CC400421BDBF239F58BCBD31DEE7 /* IQUIScrollView+Additions.swift */; };
+		9EECE8C38201AEA8EA757CE5C1337873 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		9FC66F7AC1FC0A6434FCCEB2A8EF6AD2 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AC80529A93338769B1DA08637061E /* IQKeyboardManagerConstants.swift */; };
+		C108352E7A38E9FB99907F75743114B6 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FB835F2A1CF4B8CB95A0624215189 /* IQUIViewController+Additions.swift */; };
+		C1C9864254D41A9ABB40E484E91C2F02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		C5D3FD9B4D79D9C75B80AB50413FD9EF /* Pods-playpart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A74F2A799DAFDAE00FEB1DD963159E77 /* Pods-playpart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D005939236F0DC4DE94D3162E4A21E6B /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6184842F7B7EA39C1017108F1BDA2ECD /* KeychainItemAccessibility.swift */; };
+		D166AD740741D652490830E4E62ED5A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D60AC13D33197690A05C641925DDDA /* UIKit.framework */; };
+		D8943F07141730EA0C094F40C108B660 /* IQKeyboardManagerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3735778FA5DC668A1E14B9558632A664 /* IQKeyboardManagerSwift-dummy.m */; };
+		E1BF3DCACD071E78D4F711B364DDD768 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78CDA7D44DBE43D710F5179DBF646DC /* IQKeyboardManager.swift */; };
+		E7D976091250A09655570BD888AAEFFC /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A288A520A7AAFAE43CEF91F930BDE2 /* KeychainWrapper.swift */; };
+		E8705ED6BB312ECD08FDD2BC6812695F /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94296528B6BDAC53AD7FAFB4AA7939B /* IQToolbar.swift */; };
+		ECD03F70BD29FA94C00C61CE232B3F33 /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B320D8A3BD624E9F8FEEBD1E464918 /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED03118270100A394C16A8AA563053EC /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D35C66FF48E69CFC05BE29D2F179DC /* IQBarButtonItem.swift */; };
+		F462B888A40526701BEB988C62533305 /* Pods-playpart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 269DEA61DED8D40D97AA4E85D0B2EF8C /* Pods-playpart-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0FDBCEB252FD3E2E36FE8EEA1FBEEBF9 /* PBXContainerItemProxy */ = {
+		403A257B95320F7B58E1D7600B7531DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4E51AEF148838962A9023009B8540945;
 			remoteInfo = LongPressRecordButton;
 		};
-		14F31113A4D30D8BEC712AA81DC50E3E /* PBXContainerItemProxy */ = {
+		9DDCEE799A7B36AD733BABA239395A8E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B490E7485944099E16C9CBD79119D1D4;
 			remoteInfo = IQKeyboardManagerSwift;
 		};
-		1FDD911C3B56122705C21BD0C9C6AB0E /* PBXContainerItemProxy */ = {
+		C5473172EF46489FCC1782AA5E396AF2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -75,7 +75,7 @@
 		0E29D222B546F210B9D308AB2894DA03 /* LongPressRecordButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LongPressRecordButton.debug.xcconfig; sourceTree = "<group>"; };
 		1415134EED4F40F66F5419CB896EC158 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
 		179B30367B827FF3C270BD867C6AC01D /* SwiftKeychainWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.release.xcconfig; sourceTree = "<group>"; };
-		18BEE3C2070E444ED2F2F0EBAE493544 /* LongPressRecordButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LongPressRecordButton.framework; path = LongPressRecordButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BEE3C2070E444ED2F2F0EBAE493544 /* LongPressRecordButton */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LongPressRecordButton; path = LongPressRecordButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE60229C34FF1AFBCA3960DFF34608C /* IQKeyboardManagerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.debug.xcconfig; sourceTree = "<group>"; };
 		1EDBD160B16B7BFEFBA0906B05952432 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		209E02CAC492ACD367DA19BDE1AE655B /* LongPressRecordButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LongPressRecordButton.release.xcconfig; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		4608555F4551F403644CCFDAA2FF001D /* KeychainWrapperSubscript.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapperSubscript.swift; path = SwiftKeychainWrapper/KeychainWrapperSubscript.swift; sourceTree = "<group>"; };
 		47C1662974635E585DE053AC36867B1B /* LongPressRecordButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LongPressRecordButton-prefix.pch"; sourceTree = "<group>"; };
 		4BEAEA088BA8CC26D3A035AD78B1477E /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
-		5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper.framework; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ECC60520BC6A1F31F08EBD506FBF5F /* SwiftKeychainWrapper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftKeychainWrapper-Info.plist"; sourceTree = "<group>"; };
 		55D35C66FF48E69CFC05BE29D2F179DC /* IQBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
 		5CBC18965C2BCD0C7328654041ABFAAF /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
@@ -111,12 +111,12 @@
 		9819C7E840A219D3F6D7A70DA23092E8 /* Pods-playpart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-playpart.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A07CF54512C1FB4AB86A33BC988BF9E7 /* LongPressRecordButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LongPressRecordButton.swift; path = LongPressRecordButton/LongPressRecordButton.swift; sourceTree = "<group>"; };
-		A2F9F6C87E7125B16C9E843F8C869AB0 /* Pods_playpart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_playpart.framework; path = "Pods-playpart.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F9F6C87E7125B16C9E843F8C869AB0 /* Pods-playpart */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-playpart"; path = Pods_playpart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		A568DF7477F0643E78368139CC7E9E2A /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		A74F2A799DAFDAE00FEB1DD963159E77 /* Pods-playpart-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-playpart-umbrella.h"; sourceTree = "<group>"; };
 		A87DBF6691CF30BDEC9613085502D079 /* SwiftKeychainWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.debug.xcconfig; sourceTree = "<group>"; };
-		A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManagerSwift.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManagerSwift; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3EAD24019F6658209972DB539700445 /* Pods-playpart-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-playpart-Info.plist"; sourceTree = "<group>"; };
 		B94296528B6BDAC53AD7FAFB4AA7939B /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
 		C071CA6F2FC2702CEB9EADC022EB2C51 /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
@@ -133,38 +133,38 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C2292E431F316076553538B7FBB63C3 /* Frameworks */ = {
+		552DD15772F77FD94FC3BB1C6F37BED5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33483C1C427390BED308CBAB3EEEE277 /* CoreGraphics.framework in Frameworks */,
-				EEF066616EFE6EBC57541C1B92C6770A /* Foundation.framework in Frameworks */,
-				2358B57B83BE526AED64799C6892B2CE /* QuartzCore.framework in Frameworks */,
-				38EE0727B33503FD20E1363988E46AB2 /* UIKit.framework in Frameworks */,
+				68F2802B0DDAF745794BC0BB1127C3BA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		653B045CA7FAB62ADAB7C01DD2BEAAD9 /* Frameworks */ = {
+		A72EE2EE35829AFE7DE0B7D9494401FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACFFA0384264D2A9405D840DE7FD86C0 /* Foundation.framework in Frameworks */,
+				C1C9864254D41A9ABB40E484E91C2F02 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1AAF308B89E46BFA7ECC477E103E733 /* Frameworks */ = {
+		E2D06F4F2F63043C7F0FD90489F3D033 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97FE0B28D3F5D74B22EA9665F5DDC577 /* Foundation.framework in Frameworks */,
+				7F355D21946C6C9048D02ADAB74915FF /* CoreGraphics.framework in Frameworks */,
+				9EECE8C38201AEA8EA757CE5C1337873 /* Foundation.framework in Frameworks */,
+				3DAB9B8ACA346601215FD9821E78A091 /* QuartzCore.framework in Frameworks */,
+				D166AD740741D652490830E4E62ED5A0 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE5876A0B13AF84EAC46F3B0CB531988 /* Frameworks */ = {
+		EB3FBADEC20FB915CA5DD8E3082ED82D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1457C240AAD1FBEA8CAB3F363B07F86C /* Foundation.framework in Frameworks */,
+				0272D6846A167EEC137A317C66834826 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,20 +281,9 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
 				853E407915002D3A8BADBE88556A9F62 /* Pods */,
-				D1FF5E3BE4945C746C5523D043A48359 /* Products */,
+				FFBF5C7EBF7EA62B976CA23A5F89DF03 /* Products */,
 				6687D93D12EC1C8CEDDFB7F1BDF72D2D /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D1FF5E3BE4945C746C5523D043A48359 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
-				18BEE3C2070E444ED2F2F0EBAE493544 /* LongPressRecordButton.framework */,
-				A2F9F6C87E7125B16C9E843F8C869AB0 /* Pods_playpart.framework */,
-				5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D2333C593801388B49D20DA799A07100 /* Support Files */ = {
@@ -340,39 +329,50 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		FFBF5C7EBF7EA62B976CA23A5F89DF03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift */,
+				18BEE3C2070E444ED2F2F0EBAE493544 /* LongPressRecordButton */,
+				A2F9F6C87E7125B16C9E843F8C869AB0 /* Pods-playpart */,
+				5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5FED1F6E7DD321782B0CBE7E7046D611 /* Headers */ = {
+		396189E1381EBEF775FBDA7BDDA21061 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				822CBF05D5F67B3FA5A678590D55F3EF /* SwiftKeychainWrapper-umbrella.h in Headers */,
-				033BBD6ABAE3F071C63B0EF059A9D102 /* SwiftKeychainWrapper.h in Headers */,
+				C5D3FD9B4D79D9C75B80AB50413FD9EF /* Pods-playpart-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		64A7F9D7A47F44261F02F458725EDC52 /* Headers */ = {
+		840A69FC16AA93214053C5370D384486 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED3423BDC478CFFCD1B2E9A90C22BFB /* LongPressRecordButton-umbrella.h in Headers */,
+				19DF6A30FC3FD0E23E7B81972036F4DE /* IQKeyboardManagerSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4A6429FF0F9608A16E4D96813E85F23 /* Headers */ = {
+		D6D165C86D36000927731AD958BE21C1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62A85277D0462C43B80A05E8822794BB /* IQKeyboardManagerSwift-umbrella.h in Headers */,
+				2DD2A44F4FD88FC7541A5A9CDB746688 /* SwiftKeychainWrapper.h in Headers */,
+				ECD03F70BD29FA94C00C61CE232B3F33 /* SwiftKeychainWrapper-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFBD0D6227B5ADF7539257C5D4DEC684 /* Headers */ = {
+		E3887FA75318E2183CC1369C682AB776 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E25FA6BE9FF11A3E7AA043EC5C214085 /* Pods-playpart-umbrella.h in Headers */,
+				43B30E783E42BA904D2C0CAD7795AF10 /* LongPressRecordButton-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,12 +381,12 @@
 /* Begin PBXNativeTarget section */
 		4E51AEF148838962A9023009B8540945 /* LongPressRecordButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90DF442105E3CEF4C9390CA157F48E7A /* Build configuration list for PBXNativeTarget "LongPressRecordButton" */;
+			buildConfigurationList = CEA51D8EBD85F1EBBC23117806D5AECF /* Build configuration list for PBXNativeTarget "LongPressRecordButton" */;
 			buildPhases = (
-				64A7F9D7A47F44261F02F458725EDC52 /* Headers */,
-				27C45415F87117CF7A9E3E40B54AA36F /* Sources */,
-				653B045CA7FAB62ADAB7C01DD2BEAAD9 /* Frameworks */,
-				1366AED30E16155635A2826B5252F5DB /* Resources */,
+				E3887FA75318E2183CC1369C682AB776 /* Headers */,
+				B99B55BC49F9099A9DE64A5F1951650C /* Sources */,
+				A72EE2EE35829AFE7DE0B7D9494401FA /* Frameworks */,
+				BCE9A2447F896C275D97D9F2A58967D5 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -394,38 +394,38 @@
 			);
 			name = LongPressRecordButton;
 			productName = LongPressRecordButton;
-			productReference = 18BEE3C2070E444ED2F2F0EBAE493544 /* LongPressRecordButton.framework */;
+			productReference = 18BEE3C2070E444ED2F2F0EBAE493544 /* LongPressRecordButton */;
 			productType = "com.apple.product-type.framework";
 		};
 		8311F96CDE21750A450DC90533C0052D /* Pods-playpart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55A663C402639766D7F5A2BF083677E9 /* Build configuration list for PBXNativeTarget "Pods-playpart" */;
+			buildConfigurationList = 78C431C52131A3656C271F93F5633325 /* Build configuration list for PBXNativeTarget "Pods-playpart" */;
 			buildPhases = (
-				FFBD0D6227B5ADF7539257C5D4DEC684 /* Headers */,
-				B41B2735A130CB9037656DD72490E23D /* Sources */,
-				FE5876A0B13AF84EAC46F3B0CB531988 /* Frameworks */,
-				162E729EB2CCADF22F716BF58D1E3E73 /* Resources */,
+				396189E1381EBEF775FBDA7BDDA21061 /* Headers */,
+				2E053AC1114D12D22269DDCA16EE5ED0 /* Sources */,
+				552DD15772F77FD94FC3BB1C6F37BED5 /* Frameworks */,
+				590170E0101620A11458D206AE405DCF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				65C572F5CD0A31A413E6095260F50C37 /* PBXTargetDependency */,
-				12334A32DDC662A9B5A59F33664B73AF /* PBXTargetDependency */,
-				AAD165A54B6C7DD568E8DCED0F2BA11B /* PBXTargetDependency */,
+				95FABF564C6DEE1772CACADD82BA5010 /* PBXTargetDependency */,
+				C87A3E6B099A25760E29F5270210FEB3 /* PBXTargetDependency */,
+				F048A9DBF4C8A0DF8F32E7EDF30828E4 /* PBXTargetDependency */,
 			);
 			name = "Pods-playpart";
-			productName = "Pods-playpart";
-			productReference = A2F9F6C87E7125B16C9E843F8C869AB0 /* Pods_playpart.framework */;
+			productName = Pods_playpart;
+			productReference = A2F9F6C87E7125B16C9E843F8C869AB0 /* Pods-playpart */;
 			productType = "com.apple.product-type.framework";
 		};
 		B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7155AE59A19533F60ECE3B4045B01F0 /* Build configuration list for PBXNativeTarget "IQKeyboardManagerSwift" */;
+			buildConfigurationList = B457B34920679DC500CD041991F040B2 /* Build configuration list for PBXNativeTarget "IQKeyboardManagerSwift" */;
 			buildPhases = (
-				F4A6429FF0F9608A16E4D96813E85F23 /* Headers */,
-				6C02E9CBF87ED8A1C6D8ED4C951F75A4 /* Sources */,
-				2C2292E431F316076553538B7FBB63C3 /* Frameworks */,
-				FAA5DA81F8292820D65F403E941074FC /* Resources */,
+				840A69FC16AA93214053C5370D384486 /* Headers */,
+				B58C8977AC61F5150CF3B38403C7CDEC /* Sources */,
+				E2D06F4F2F63043C7F0FD90489F3D033 /* Frameworks */,
+				24936075776705F52CC3C03E449F2987 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -433,17 +433,17 @@
 			);
 			name = IQKeyboardManagerSwift;
 			productName = IQKeyboardManagerSwift;
-			productReference = A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */;
+			productReference = A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift */;
 			productType = "com.apple.product-type.framework";
 		};
 		CF903DF43E111410ECA0C288D36FA21A /* SwiftKeychainWrapper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71BC14DB3177B615BBDC59610892C8D8 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */;
+			buildConfigurationList = 98BCB2F8FCBF8621114310D5DB4657DB /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */;
 			buildPhases = (
-				5FED1F6E7DD321782B0CBE7E7046D611 /* Headers */,
-				C94E7F7C4BBE1B79F117D8DCFF6E3E1D /* Sources */,
-				F1AAF308B89E46BFA7ECC477E103E733 /* Frameworks */,
-				6DAA8C3B0A6E88B6A3FA4DA987069768 /* Resources */,
+				D6D165C86D36000927731AD958BE21C1 /* Headers */,
+				796B4A55654BBB6FE852AAB7A60EE625 /* Sources */,
+				EB3FBADEC20FB915CA5DD8E3082ED82D /* Frameworks */,
+				C43BC878A5CB5CE6C59FF13F0DF23FA9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -451,7 +451,7 @@
 			);
 			name = SwiftKeychainWrapper;
 			productName = SwiftKeychainWrapper;
-			productReference = 5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper.framework */;
+			productReference = 5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -460,19 +460,19 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = D1FF5E3BE4945C746C5523D043A48359 /* Products */;
+			productRefGroup = FFBF5C7EBF7EA62B976CA23A5F89DF03 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -485,28 +485,28 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1366AED30E16155635A2826B5252F5DB /* Resources */ = {
+		24936075776705F52CC3C03E449F2987 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		162E729EB2CCADF22F716BF58D1E3E73 /* Resources */ = {
+		590170E0101620A11458D206AE405DCF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6DAA8C3B0A6E88B6A3FA4DA987069768 /* Resources */ = {
+		BCE9A2447F896C275D97D9F2A58967D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAA5DA81F8292820D65F403E941074FC /* Resources */ = {
+		C43BC878A5CB5CE6C59FF13F0DF23FA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -516,85 +516,85 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		27C45415F87117CF7A9E3E40B54AA36F /* Sources */ = {
+		2E053AC1114D12D22269DDCA16EE5ED0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD4B9BAD914BCB13241C9BDB823FAB17 /* LongPressRecordButton-dummy.m in Sources */,
-				7467EBB8E94142D937F5AB6144511A01 /* LongPressRecordButton.swift in Sources */,
+				F462B888A40526701BEB988C62533305 /* Pods-playpart-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C02E9CBF87ED8A1C6D8ED4C951F75A4 /* Sources */ = {
+		796B4A55654BBB6FE852AAB7A60EE625 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE417BA9D13D2BB98316DF0512A1944 /* IQBarButtonItem.swift in Sources */,
-				4F0CF2AD58CF0D08BC090E7AF0DD63D7 /* IQInvocation.swift in Sources */,
-				3F091C427A3E96117C902E8EA143729E /* IQKeyboardManager.swift in Sources */,
-				C04C5F1F1D6B337F87E157B55A747E41 /* IQKeyboardManagerConstants.swift in Sources */,
-				102F4487BC4ADC3C2B56A0470E0A9468 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
-				B98378C55379E1B92897F11A22E38443 /* IQKeyboardManagerSwift-dummy.m in Sources */,
-				4737103B10A1C40C5301D0512B9310E4 /* IQKeyboardReturnKeyHandler.swift in Sources */,
-				259D6FC80BCFE785471F743B1F533970 /* IQNSArray+Sort.swift in Sources */,
-				5044FEAEF09468B6964F9F37A1F1F45C /* IQPreviousNextView.swift in Sources */,
-				7FB3576FD619DD256294BAD7E5F83CBE /* IQTextView.swift in Sources */,
-				C35DCE97EB77150C41E735DB57BD6616 /* IQTitleBarButtonItem.swift in Sources */,
-				980E5594F8DBCE362764AEDC2F086E36 /* IQToolbar.swift in Sources */,
-				C0EB3776478AB80676E488BC9C9CDA3C /* IQUIScrollView+Additions.swift in Sources */,
-				4C069FA7FAA45154DA92CF5DF3BCDCA9 /* IQUITextFieldView+Additions.swift in Sources */,
-				8B439A47AA5FDEF67AD63BDDB808AC5A /* IQUIView+Hierarchy.swift in Sources */,
-				AE3B246482DCD60BA846EA3CE983A1FB /* IQUIView+IQKeyboardToolbar.swift in Sources */,
-				74341DA37F4B926FDF4CB2599CAC547A /* IQUIViewController+Additions.swift in Sources */,
+				D005939236F0DC4DE94D3162E4A21E6B /* KeychainItemAccessibility.swift in Sources */,
+				E7D976091250A09655570BD888AAEFFC /* KeychainWrapper.swift in Sources */,
+				4D5CAB203E46FDEFC5FF48A820B5CA43 /* KeychainWrapperSubscript.swift in Sources */,
+				2C3FBDBB0815930AE6D237D3132F7AB5 /* SwiftKeychainWrapper-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B41B2735A130CB9037656DD72490E23D /* Sources */ = {
+		B58C8977AC61F5150CF3B38403C7CDEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				335A29DBDDB52A6CE0FAE4744BC20446 /* Pods-playpart-dummy.m in Sources */,
+				ED03118270100A394C16A8AA563053EC /* IQBarButtonItem.swift in Sources */,
+				0EDB6F2AFCFE8CFAE35446A388476550 /* IQInvocation.swift in Sources */,
+				E1BF3DCACD071E78D4F711B364DDD768 /* IQKeyboardManager.swift in Sources */,
+				9FC66F7AC1FC0A6434FCCEB2A8EF6AD2 /* IQKeyboardManagerConstants.swift in Sources */,
+				044E4EAF3671A3ADE80BAF4B67A94100 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				D8943F07141730EA0C094F40C108B660 /* IQKeyboardManagerSwift-dummy.m in Sources */,
+				802859A858E7FD17EF7FA3546E7B4792 /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				3C730938D46EFDD5000EC8D9632CE44C /* IQNSArray+Sort.swift in Sources */,
+				6732C6F2ECEDB38E727EB1FD50B84184 /* IQPreviousNextView.swift in Sources */,
+				17F11791E50F22F1D757EE64E71A38E0 /* IQTextView.swift in Sources */,
+				22DE2EE5C678595CE3559EC9DD4514E9 /* IQTitleBarButtonItem.swift in Sources */,
+				E8705ED6BB312ECD08FDD2BC6812695F /* IQToolbar.swift in Sources */,
+				931182EE544BE21CDA68DCAFF537045B /* IQUIScrollView+Additions.swift in Sources */,
+				8BB57FC2CDE9C6DFA0CEF1280BC4415E /* IQUITextFieldView+Additions.swift in Sources */,
+				62D6540648BB5B2733C840BA8CCB65B9 /* IQUIView+Hierarchy.swift in Sources */,
+				4D5C42CA295C8D267E66102ACBC81E55 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				C108352E7A38E9FB99907F75743114B6 /* IQUIViewController+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C94E7F7C4BBE1B79F117D8DCFF6E3E1D /* Sources */ = {
+		B99B55BC49F9099A9DE64A5F1951650C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6FACF8380230654339AB395C6B53CF /* KeychainItemAccessibility.swift in Sources */,
-				3E70705D8813722E2EFC41A92149AF77 /* KeychainWrapper.swift in Sources */,
-				3F3296FB6A78A8E4DE96729AF2E3BDAB /* KeychainWrapperSubscript.swift in Sources */,
-				2A6B7A988B5C210E8156607BAFCDC8D5 /* SwiftKeychainWrapper-dummy.m in Sources */,
+				16AB46E026E28502031BBD49766A5BB0 /* LongPressRecordButton.swift in Sources */,
+				8318D6C9E6438101346A88A9FE020318 /* LongPressRecordButton-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		12334A32DDC662A9B5A59F33664B73AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LongPressRecordButton;
-			target = 4E51AEF148838962A9023009B8540945 /* LongPressRecordButton */;
-			targetProxy = 0FDBCEB252FD3E2E36FE8EEA1FBEEBF9 /* PBXContainerItemProxy */;
-		};
-		65C572F5CD0A31A413E6095260F50C37 /* PBXTargetDependency */ = {
+		95FABF564C6DEE1772CACADD82BA5010 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IQKeyboardManagerSwift;
 			target = B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */;
-			targetProxy = 14F31113A4D30D8BEC712AA81DC50E3E /* PBXContainerItemProxy */;
+			targetProxy = 9DDCEE799A7B36AD733BABA239395A8E /* PBXContainerItemProxy */;
 		};
-		AAD165A54B6C7DD568E8DCED0F2BA11B /* PBXTargetDependency */ = {
+		C87A3E6B099A25760E29F5270210FEB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LongPressRecordButton;
+			target = 4E51AEF148838962A9023009B8540945 /* LongPressRecordButton */;
+			targetProxy = 403A257B95320F7B58E1D7600B7531DA /* PBXContainerItemProxy */;
+		};
+		F048A9DBF4C8A0DF8F32E7EDF30828E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftKeychainWrapper;
 			target = CF903DF43E111410ECA0C288D36FA21A /* SwiftKeychainWrapper */;
-			targetProxy = 1FDD911C3B56122705C21BD0C9C6AB0E /* PBXContainerItemProxy */;
+			targetProxy = C5473172EF46489FCC1782AA5E396AF2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3BE7200682DA3DD02079CC5BBF5E56EB /* Debug */ = {
+		0D512415DFF8BF155E5BEC617C2A1A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BE60229C34FF1AFBCA3960DFF34608C /* IQKeyboardManagerSwift.debug.xcconfig */;
+			baseConfigurationReference = 0E29D222B546F210B9D308AB2894DA03 /* LongPressRecordButton.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -604,29 +604,29 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/LongPressRecordButton/LongPressRecordButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LongPressRecordButton/LongPressRecordButton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift.modulemap";
-				PRODUCT_MODULE_NAME = IQKeyboardManagerSwift;
-				PRODUCT_NAME = IQKeyboardManagerSwift;
+				MODULEMAP_FILE = "Target Support Files/LongPressRecordButton/LongPressRecordButton.modulemap";
+				PRODUCT_MODULE_NAME = LongPressRecordButton;
+				PRODUCT_NAME = LongPressRecordButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.3;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		570441C1F5596AD9C38B32F1B45EB0AA /* Release */ = {
+		4ECA506D51D2C1314CDCED925236348F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 209E02CAC492ACD367DA19BDE1AE655B /* LongPressRecordButton.release.xcconfig */;
 			buildSettings = {
@@ -723,6 +723,147 @@
 			};
 			name = Release;
 		};
+		7ACE7A3E9761C14C41FC14F8D52D847E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9819C7E840A219D3F6D7A70DA23092E8 /* Pods-playpart.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-playpart/Pods-playpart-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-playpart/Pods-playpart.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		876F2B20ED737134817FF257F66D655B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BE60229C34FF1AFBCA3960DFF34608C /* IQKeyboardManagerSwift.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift.modulemap";
+				PRODUCT_MODULE_NAME = IQKeyboardManagerSwift;
+				PRODUCT_NAME = IQKeyboardManagerSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8CD241342938F54A20E875C2AE5904F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A87DBF6691CF30BDEC9613085502D079 /* SwiftKeychainWrapper.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
+				PRODUCT_NAME = SwiftKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		986CA13C16CB2180B15C7439E2C71672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 179B30367B827FF3C270BD867C6AC01D /* SwiftKeychainWrapper.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
+				PRODUCT_NAME = SwiftKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A0374B8CF9A7D6A45F6D116D698D1C19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -789,7 +930,7 @@
 			};
 			name = Debug;
 		};
-		B4752DE2B5485970DB8400F0295B3EDF /* Debug */ = {
+		A6A51D78FF57D445F6A124484C991678 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 832C1547DE874C329E4A1BF62C7145EE /* Pods-playpart.debug.xcconfig */;
 			buildSettings = {
@@ -826,148 +967,7 @@
 			};
 			name = Debug;
 		};
-		B504478E203AE8FED35D700715006442 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9819C7E840A219D3F6D7A70DA23092E8 /* Pods-playpart.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-playpart/Pods-playpart-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-playpart/Pods-playpart.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C9B65A5B61AE285BD7D56165035C1168 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A87DBF6691CF30BDEC9613085502D079 /* SwiftKeychainWrapper.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
-				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
-				PRODUCT_NAME = SwiftKeychainWrapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D930CF4754F8BD8C7A760E0F6B325D98 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 179B30367B827FF3C270BD867C6AC01D /* SwiftKeychainWrapper.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
-				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
-				PRODUCT_NAME = SwiftKeychainWrapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		DA2E400174712E4A9A3446728413053F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E29D222B546F210B9D308AB2894DA03 /* LongPressRecordButton.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LongPressRecordButton/LongPressRecordButton-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LongPressRecordButton/LongPressRecordButton-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/LongPressRecordButton/LongPressRecordButton.modulemap";
-				PRODUCT_MODULE_NAME = LongPressRecordButton;
-				PRODUCT_NAME = LongPressRecordButton;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		ECD830E9FF60065425D88BB789C29686 /* Release */ = {
+		D3FAE5966AF5E3820731D684943C1B87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 708DE1FB09B25921D079E3CAE74070A1 /* IQKeyboardManagerSwift.release.xcconfig */;
 			buildSettings = {
@@ -1014,38 +1014,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55A663C402639766D7F5A2BF083677E9 /* Build configuration list for PBXNativeTarget "Pods-playpart" */ = {
+		78C431C52131A3656C271F93F5633325 /* Build configuration list for PBXNativeTarget "Pods-playpart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4752DE2B5485970DB8400F0295B3EDF /* Debug */,
-				B504478E203AE8FED35D700715006442 /* Release */,
+				A6A51D78FF57D445F6A124484C991678 /* Debug */,
+				7ACE7A3E9761C14C41FC14F8D52D847E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71BC14DB3177B615BBDC59610892C8D8 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */ = {
+		98BCB2F8FCBF8621114310D5DB4657DB /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C9B65A5B61AE285BD7D56165035C1168 /* Debug */,
-				D930CF4754F8BD8C7A760E0F6B325D98 /* Release */,
+				8CD241342938F54A20E875C2AE5904F6 /* Debug */,
+				986CA13C16CB2180B15C7439E2C71672 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90DF442105E3CEF4C9390CA157F48E7A /* Build configuration list for PBXNativeTarget "LongPressRecordButton" */ = {
+		B457B34920679DC500CD041991F040B2 /* Build configuration list for PBXNativeTarget "IQKeyboardManagerSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA2E400174712E4A9A3446728413053F /* Debug */,
-				570441C1F5596AD9C38B32F1B45EB0AA /* Release */,
+				876F2B20ED737134817FF257F66D655B /* Debug */,
+				D3FAE5966AF5E3820731D684943C1B87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7155AE59A19533F60ECE3B4045B01F0 /* Build configuration list for PBXNativeTarget "IQKeyboardManagerSwift" */ = {
+		CEA51D8EBD85F1EBBC23117806D5AECF /* Build configuration list for PBXNativeTarget "LongPressRecordButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BE7200682DA3DD02079CC5BBF5E56EB /* Debug */,
-				ECD830E9FF60065425D88BB789C29686 /* Release */,
+				0D512415DFF8BF155E5BEC617C2A1A51 /* Debug */,
+				4ECA506D51D2C1314CDCED925236348F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
