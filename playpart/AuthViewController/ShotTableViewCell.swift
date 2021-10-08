@@ -16,9 +16,14 @@ class ShotTableViewCell: UITableViewCell, ASAutoPlayVideoLayerContainer {
     var videoURL: String? {
         didSet {
             if let videoURL = videoURL {
+                print("\n\n")
+                print("The video URL is here",videoURL)
                 ASVideoPlayerController.sharedVideoPlayer.setupVideoFor(url: videoURL)
             }
+            
             videoLayer.isHidden = videoURL == nil
+            print("The video url is",videoLayer.isHidden)
+            videoLayer.player?.play()
         }
     }
     override func awakeFromNib() {

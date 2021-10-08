@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 import SwiftKeychainWrapper
+import Alamofire
+
 
 enum AppKey : String{
     case accessToken = "accessTokenKey"
@@ -21,6 +23,8 @@ struct APIURL{
     static let baseURL  = "https://app.playpart.xyz/api/v1/"
     static let register = "auth/sign_up"
     static let Login = "auth/login"
+    static let video = "videos"
+    static let get_video_list = "videos/get_video_list"
     
 }
 
@@ -104,6 +108,100 @@ class API_Handler{
                 
             }.resume()
             
+        }
+    }
+}
+
+
+extension API_Handler{
+    
+    
+    func getHeaders()->HTTPHeader{
+        let token  = KeychainWrapper.standard.string(forKey: AppKey.accessToken.value)
+        let headers : HTTPHeader = HTTPHeader.init(name: "Authorization", value: "Bearer \(token!)")
+        
+        return headers
+    }
+    func getAllVideos(success: @escaping ([VideoData])->Void, failure : @escaping (String)->()){
+        
+        let videoList = APIURL.baseURL + APIURL.get_video_list
+        let headers = getHeaders()
+        
+        AF.request(videoList,headers: [headers]).responseJSON { response in
+            debugPrint(response.result)
+            switch response.result{
+            case .success(let data):
+                print("The data",data)
+                var videosList : [VideoData] = []
+                if let json  = data as? [String : Any]{
+                    
+                    guard let videos  = json["videos"] as? NSArray else {
+                        failure("Videos not found")
+                        return
+                    }
+                    
+                    for i in videos{
+                        let temp = VideoData(i as! [String : Any])
+                        videosList.append(temp)
+                    }
+                    
+                    success(videosList)
+                    
+                }else{
+                    failure("Videos not found")
+                }
+            case .failure(let err):
+                print("Error is here",err)
+                failure(err.localizedDescription)
+            }
+        }
+    }
+    
+    
+    func uploadVideo(_ description : String,_ videoURL : URL,_ title: String, success: @escaping ()->Void, failure : @escaping (String)->()){
+        
+        let videoUploadURL = APIURL.baseURL + APIURL.video
+        let timestamp = NSDate().timeIntervalSince1970
+    
+        let headers = getHeaders()
+
+        AF.upload(multipartFormData: { (multipartFormData) in
+            multipartFormData.append(title.data(using: .utf8)!, withName: "name")
+            multipartFormData.append(description.data(using: .utf8)!, withName: "description")
+            multipartFormData.append(videoURL, withName: "video", fileName: "\(timestamp).mov", mimeType: "\(timestamp)/mp4")
+        },
+        to: videoUploadURL,headers: [headers]).responseJSON {
+            (response) in
+            debugPrint(response.result)
+            
+            switch response.result{
+            
+            case .success(let data):
+              
+                if let json = data as? [String : Any]{
+                    if let error = json["error"] as? String{
+                        failure(error)
+                    }else{
+                        
+                        if let isSuccess = json["success"] as? Bool, isSuccess{
+                            success()
+                        }else{
+                    
+                            if let msg = json["message"] as? String{
+                                failure(msg)
+                            }
+                        }
+                      
+                    }
+                }else{
+                  
+                    failure("Something Went Wrong")
+                }
+               
+            case .failure(let err):
+                print("Error is here",err)
+                failure(err.localizedDescription)
+            }
         }
     }
 }

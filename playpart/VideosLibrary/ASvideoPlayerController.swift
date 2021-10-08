@@ -50,6 +50,7 @@ class ASVideoPlayerController: NSObject, NSCacheDelegate {
      */
     func setupVideoFor(url: String) {
         if self.videoCache.object(forKey: url as NSString) != nil {
+            print("Returning video")
             return
         }
         guard let URL = URL(string: url) else {

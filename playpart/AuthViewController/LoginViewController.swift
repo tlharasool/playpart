@@ -164,7 +164,7 @@ class LoginViewController: UIViewController{
         apiHandler.LogInUser(parameters: dataDictonary, failure:{msg in
       
             DispatchQueue.main.async {
-                stopLoader(loader: loader, completionHandler:{
+                self.stopLoader(loader: loader, completionHandler:{
                     let alert = UIAlertController(title: "error", message: msg , preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Dismiss",style: .cancel,handler: {action in}))
                     self.present(alert, animated: true)
@@ -175,10 +175,12 @@ class LoginViewController: UIViewController{
             }
         }, success:{msg in
             DispatchQueue.main.async {
-                stopLoader(loader: loader, completionHandler: { [self] in
+                self.stopLoader(loader: loader, completionHandler: { [self] in
                 //    popScreenAfterLogginAndSignUp()
+                    
                     let vc = HomeTabBarController.instantiateViewController()
-                    UIApplication.shared.setRootVC(vc)
+                    let nav = UINavigationController(rootViewController: vc)
+                    UIApplication.shared.setRootVC(nav)
                     
                 })
           
@@ -217,10 +219,10 @@ extension LoginViewController: UITextFieldDelegate
     }
 }
 
-extension LoginViewController{
+extension UIViewController{
     
-    func loader() -> UIAlertController{
-        let alert = UIAlertController(title: nil, message: "please wait", preferredStyle: .alert)
+    func loader(msg : String = "Loading...") -> UIAlertController{
+        let alert = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
         let loadingindicator = UIActivityIndicatorView(frame: CGRect(x:10,y:5, width: 50,height: 50))
         loadingindicator.hidesWhenStopped = true
         loadingindicator.style = UIActivityIndicatorView.Style.large
@@ -229,21 +231,37 @@ extension LoginViewController{
         present(alert, animated: true, completion: nil)
         return alert
     }
-}
-
-
-func stopLoader(loader : UIAlertController, completionHandler : @escaping ()->()) {
-    DispatchQueue.main.async {
-      
-        loader.dismiss(animated: true, completion: {
-            completionHandler()
-        })
+    
+    func stopLoader(loader : UIAlertController, completionHandler : @escaping ()->()) {
+        DispatchQueue.main.async {
+          
+            loader.dismiss(animated: true, completion: {
+                completionHandler()
+            })
+        }
     }
-    
-    
 }
+
+
+
 
 extension LoginViewController : StoryboardInitializable{
 
     static var storyboardName: UIStoryboard.Storyboard{return .main}
+}
+
+
+extension UIViewController{
+    
+    func showAlertWithAction(messageToDisplay: String, completion_handler  : @escaping ()->())
+    {
+        let alertController = UIAlertController(title: nil, message: messageToDisplay, preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "Done", style: .default) { (action:UIAlertAction!) in
+            completion_handler()
+        }
+        alertController.addAction(OKAction)
+        
+        self.present(alertController, animated: true, completion:nil)
+    }
 }

@@ -44,9 +44,7 @@ extension PersonalInfoTableViewController{
         section3cell1.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(addTapOnPassword(_:))))
         
         section2cell3.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(addTapOnName(_:))))
-        
-        
-        
+    
     }
 }
 
@@ -74,4 +72,11 @@ extension PersonalInfoTableViewController{
 
 extension PersonalInfoTableViewController : StoryboardInitializable{
     static var storyboardName: UIStoryboard.Storyboard{ return .main}
+}
+
+
+extension UIViewController{
+    @objc func setBackAction(_ sender : UIButton){
+        self.navigationController?.popController()
+    }
 }

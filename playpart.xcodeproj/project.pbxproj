@@ -19,16 +19,19 @@
 		BC509DE8270D8A4B004FA272 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC509DE7270D8A4B004FA272 /* Home.storyboard */; };
 		BC509DEA270D8B64004FA272 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC509DE9270D8B64004FA272 /* HomeTabBarController.swift */; };
 		BC509DEC270D90C8004FA272 /* PersonalInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC509DEB270D90C8004FA272 /* PersonalInfoTableViewController.swift */; };
+		BC7226D0270F29EF00636E34 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7226CE270F29EF00636E34 /* PlayerCell.swift */; };
+		BC7226D1270F29EF00636E34 /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7226CF270F29EF00636E34 /* PlayerCell.xib */; };
+		BC7226D5270F2AC600636E34 /* CoverA.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7226D3270F2AC600636E34 /* CoverA.xib */; };
+		BC7226D6270F2AC600636E34 /* CoverA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7226D4270F2AC600636E34 /* CoverA.swift */; };
 		BC813E93270304D10051E577 /* ASVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E90270304D10051E577 /* ASVideoController.swift */; };
 		BC813E94270304D10051E577 /* ASVideoLayerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E91270304D10051E577 /* ASVideoLayerObject.swift */; };
 		BC813E95270304D10051E577 /* ASvideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E92270304D10051E577 /* ASvideoPlayerController.swift */; };
-		BC813E97270305160051E577 /* VideoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E96270305160051E577 /* VideoListTableViewController.swift */; };
+		BC813E97270305160051E577 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E96270305160051E577 /* PlayerViewController.swift */; };
 		BC813EA4270306C90051E577 /* ShotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC813EA3270306C90051E577 /* ShotTableViewCell.xib */; };
 		BC813EA6270306D00051E577 /* ShotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813EA5270306D00051E577 /* ShotTableViewCell.swift */; };
 		BC813EA8270314C20051E577 /* StaticaTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813EA7270314C20051E577 /* StaticaTableView.swift */; };
 		BCB65BF0270DC4FA0085F315 /* CamerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB65BEF270DC4FA0085F315 /* CamerViewController.swift */; };
 		BCB65BF2270DCACA0085F315 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB65BF1270DCACA0085F315 /* Record.storyboard */; };
-		BCB65BF4270DCAEC0085F315 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB65BF3270DCAEC0085F315 /* RecordViewController.swift */; };
 		BCB65BF6270DDCB00085F315 /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB65BF5270DDCB00085F315 /* RecordVideoViewController.swift */; };
 		E90B487426F0DC2200D6596C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B487326F0DC2200D6596C /* LoadingView.swift */; };
 		E961C0E026EF1E5E00C01F1E /* UISelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E961C0DF26EF1E5E00C01F1E /* UISelectionViewController.swift */; };
@@ -46,7 +49,7 @@
 		E9C1B76126EA2D4E0055885B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C1B76026EA2D4D0055885B /* Assets.xcassets */; };
 		E9C1B76426EA30B30055885B /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C1B76326EA30B30055885B /* ColorHelper.swift */; };
 		E9C1B76826EA39370055885B /* TextfieldHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C1B76726EA39370055885B /* TextfieldHelper.swift */; };
-		E9C89A4D270DABEF0066BB4B /* DescriptionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C89A4C270DABEF0066BB4B /* DescriptionTextField.swift */; };
+		E9C89A4D270DABEF0066BB4B /* RecordVideoInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C89A4C270DABEF0066BB4B /* RecordVideoInfoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,16 +65,19 @@
 		BC509DE7270D8A4B004FA272 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BC509DE9270D8B64004FA272 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		BC509DEB270D90C8004FA272 /* PersonalInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewController.swift; sourceTree = "<group>"; };
+		BC7226CE270F29EF00636E34 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		BC7226CF270F29EF00636E34 /* PlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
+		BC7226D3270F2AC600636E34 /* CoverA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverA.xib; sourceTree = "<group>"; };
+		BC7226D4270F2AC600636E34 /* CoverA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverA.swift; sourceTree = "<group>"; };
 		BC813E90270304D10051E577 /* ASVideoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASVideoController.swift; sourceTree = "<group>"; };
 		BC813E91270304D10051E577 /* ASVideoLayerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASVideoLayerObject.swift; sourceTree = "<group>"; };
 		BC813E92270304D10051E577 /* ASvideoPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASvideoPlayerController.swift; sourceTree = "<group>"; };
-		BC813E96270305160051E577 /* VideoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListTableViewController.swift; sourceTree = "<group>"; };
+		BC813E96270305160051E577 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		BC813EA3270306C90051E577 /* ShotTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotTableViewCell.xib; sourceTree = "<group>"; };
 		BC813EA5270306D00051E577 /* ShotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotTableViewCell.swift; sourceTree = "<group>"; };
 		BC813EA7270314C20051E577 /* StaticaTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticaTableView.swift; sourceTree = "<group>"; };
 		BCB65BEF270DC4FA0085F315 /* CamerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerViewController.swift; sourceTree = "<group>"; };
 		BCB65BF1270DCACA0085F315 /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
-		BCB65BF3270DCAEC0085F315 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		BCB65BF5270DDCB00085F315 /* RecordVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
 		D906B694EC8694A064EF127D /* Pods_playpart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playpart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90B487326F0DC2200D6596C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -92,7 +98,7 @@
 		E9C1B76026EA2D4D0055885B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9C1B76326EA30B30055885B /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		E9C1B76726EA39370055885B /* TextfieldHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldHelper.swift; sourceTree = "<group>"; };
-		E9C89A4C270DABEF0066BB4B /* DescriptionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextField.swift; sourceTree = "<group>"; };
+		E9C89A4C270DABEF0066BB4B /* RecordVideoInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoInfoController.swift; sourceTree = "<group>"; };
 		F16C29823B71519FE18C1640 /* Pods-playpart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playpart.debug.xcconfig"; path = "Target Support Files/Pods-playpart/Pods-playpart.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +131,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BC7226D2270F2AC600636E34 /* CoverView */ = {
+			isa = PBXGroup;
+			children = (
+				BC7226D3270F2AC600636E34 /* CoverA.xib */,
+				BC7226D4270F2AC600636E34 /* CoverA.swift */,
+			);
+			path = CoverView;
+			sourceTree = "<group>";
+		};
 		BC813E862702FC910051E577 /* App_Scene_Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,9 +152,12 @@
 		BC813E872702FCC40051E577 /* textFieldHelper */ = {
 			isa = PBXGroup;
 			children = (
+				BC7226D2270F2AC600636E34 /* CoverView */,
 				E9C1B76726EA39370055885B /* TextfieldHelper.swift */,
 				E9891E3A26EB3AB90015A43A /* UITextFieldLeftView.swift */,
-				E9C89A4C270DABEF0066BB4B /* DescriptionTextField.swift */,
+				E9C89A4C270DABEF0066BB4B /* RecordVideoInfoController.swift */,
+				BC7226CE270F29EF00636E34 /* PlayerCell.swift */,
+				BC7226CF270F29EF00636E34 /* PlayerCell.xib */,
 			);
 			path = textFieldHelper;
 			sourceTree = "<group>";
@@ -151,14 +169,13 @@
 				E961C0DF26EF1E5E00C01F1E /* UISelectionViewController.swift */,
 				E9C1B74526EA094E0055885B /* ViewController.swift */,
 				E9981B3226F49E4000F429D4 /* LoginViewController.swift */,
-				BC813E96270305160051E577 /* VideoListTableViewController.swift */,
+				BC813E96270305160051E577 /* PlayerViewController.swift */,
 				BC813EA5270306D00051E577 /* ShotTableViewCell.swift */,
 				BC813EA3270306C90051E577 /* ShotTableViewCell.xib */,
 				07FAA6C02708399A0027C816 /* AccountTableViewController.swift */,
 				07FAA6C2270839C40027C816 /* PrivacyTableViewController.swift */,
 				07FAA6C4270839F10027C816 /* SetPasswordViewController.swift */,
 				07FAA6C627083A3A0027C816 /* SetNameViewController.swift */,
-				BCB65BF3270DCAEC0085F315 /* RecordViewController.swift */,
 				BCB65BF5270DDCB00085F315 /* RecordVideoViewController.swift */,
 			);
 			path = AuthViewController;
@@ -332,9 +349,11 @@
 				E9C1B75726EA12B70055885B /* Montserrat-Regular.ttf in Resources */,
 				E9C1B74E26EA09500055885B /* LaunchScreen.storyboard in Resources */,
 				E9981B2F26F356C400F429D4 /* ItemCollectionViewCell.xib in Resources */,
+				BC7226D1270F29EF00636E34 /* PlayerCell.xib in Resources */,
 				E9C1B74926EA094E0055885B /* Main.storyboard in Resources */,
 				E9C1B76126EA2D4E0055885B /* Assets.xcassets in Resources */,
 				BC509DE8270D8A4B004FA272 /* Home.storyboard in Resources */,
+				BC7226D5270F2AC600636E34 /* CoverA.xib in Resources */,
 				BC813EA4270306C90051E577 /* ShotTableViewCell.xib in Resources */,
 				BCB65BF2270DCACA0085F315 /* Record.storyboard in Resources */,
 			);
@@ -396,13 +415,13 @@
 				BC509DEA270D8B64004FA272 /* HomeTabBarController.swift in Sources */,
 				BC509DE6270D8A1C004FA272 /* StoryboardIntialize.swift in Sources */,
 				07FAA6C5270839F10027C816 /* SetPasswordViewController.swift in Sources */,
+				BC7226D6270F2AC600636E34 /* CoverA.swift in Sources */,
 				E90B487426F0DC2200D6596C /* LoadingView.swift in Sources */,
 				BC509DDE270D838A004FA272 /* UIApplication + Extension.swift in Sources */,
-				BCB65BF4270DCAEC0085F315 /* RecordViewController.swift in Sources */,
 				BC509DE2270D87B5004FA272 /* Navigation + Extension.swift in Sources */,
 				07FAA6C727083A3A0027C816 /* SetNameViewController.swift in Sources */,
 				BC813E95270304D10051E577 /* ASvideoPlayerController.swift in Sources */,
-				E9C89A4D270DABEF0066BB4B /* DescriptionTextField.swift in Sources */,
+				E9C89A4D270DABEF0066BB4B /* RecordVideoInfoController.swift in Sources */,
 				E9C1B74226EA094E0055885B /* AppDelegate.swift in Sources */,
 				BC509DEC270D90C8004FA272 /* PersonalInfoTableViewController.swift in Sources */,
 				E9C1B74426EA094E0055885B /* SceneDelegate.swift in Sources */,
@@ -417,8 +436,9 @@
 				BC813E93270304D10051E577 /* ASVideoController.swift in Sources */,
 				E9981B3326F49E4000F429D4 /* LoginViewController.swift in Sources */,
 				BC813EA8270314C20051E577 /* StaticaTableView.swift in Sources */,
-				BC813E97270305160051E577 /* VideoListTableViewController.swift in Sources */,
+				BC813E97270305160051E577 /* PlayerViewController.swift in Sources */,
 				E9A8B6EA26EF717500A77F56 /* Models.swift in Sources */,
+				BC7226D0270F29EF00636E34 /* PlayerCell.swift in Sources */,
 				07FAA6C3270839C40027C816 /* PrivacyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,7 +596,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.playpart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.euphoria.playpart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -598,7 +618,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.playpart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.euphoria.playpart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

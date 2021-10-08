@@ -37,6 +37,7 @@ class ViewController: UIViewController{
     }
 }
 extension ViewController{
+    
     @IBAction func actionOnSignUp(_ sender: Any) {
         view.endEditing(true)
         checkEntities()
@@ -59,21 +60,15 @@ extension ViewController{
 
 }
 extension ViewController{
+    
     func serverSide(){
         let loader =  self.loader()
         let params = ["email" : insertNameTxtFld.text,"password" : passwordFieldTxtFld.text,"password_confirmation" : repeatPasswordTxtFld.text]
         apiHandler.registerUser(parameters: params, success: {msg in
-            
             self.stopLoader(loader: loader) {
-            
                 DispatchQueue.main.async {
                     print("Enter Sucessfully")
                     self.popUpSreenAfterSignUp()
-                    /*let alert = UIAlertController(title: "Sucessfully", message: msg, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {action in}))
-                    self.present(alert, animated: true)
-                    print("error in main que")*/
-                    
                     print(msg)
                 }
                 
@@ -89,14 +84,10 @@ extension ViewController{
                     let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {action in}))
                     self.present(alert, animated: true)
-                    print("error in main que")
-                    
+                    print("error in main Queu")
                     print(msg)
                 }
             }
-            
-            
-     
         })
 
     }
@@ -233,24 +224,27 @@ extension ViewController{
         setPasswordTxtFldProperties()
         setrepeatPasswordTxtFldProperties()
     }
+    
 }
-extension ViewController{
-    func loader() -> UIAlertController{
-        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
-        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = UIActivityIndicatorView.Style.large
-        loadingIndicator.startAnimating()
-        alert.view.addSubview(loadingIndicator)
-        present(alert, animated: true, completion: nil)
-        return alert
-    }
-    func stopLoader(loader : UIAlertController, completionHandler : @escaping ()->()) {
-            DispatchQueue.main.async {
-                loader.dismiss(animated: true, completion: {
-                    completionHandler()
-                })
-            }
-        }
 
-}
+
+//extension ViewController{
+//    func loader() -> UIAlertController{
+//        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+//        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+//        loadingIndicator.hidesWhenStopped = true
+//        loadingIndicator.style = UIActivityIndicatorView.Style.large
+//        loadingIndicator.startAnimating()
+//        alert.view.addSubview(loadingIndicator)
+//        present(alert, animated: true, completion: nil)
+//        return alert
+//    }
+//    func stopLoader(loader : UIAlertController, completionHandler : @escaping ()->()) {
+//            DispatchQueue.main.async {
+//                loader.dismiss(animated: true, completion: {
+//                    completionHandler()
+//                })
+//            }
+//        }
+//
+//}

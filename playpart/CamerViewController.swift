@@ -135,6 +135,9 @@ extension CamerViewController{
     }
     
     
+    func stopMovieRecording(){
+        self.movieOutput.stopRecording()
+    }
     
 }
 

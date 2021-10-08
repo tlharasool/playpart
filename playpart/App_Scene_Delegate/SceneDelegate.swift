@@ -62,7 +62,8 @@ extension SceneDelegate {
 
         let vc = HomeTabBarController.instantiateViewController()
         CustomUserDefaults.shared.set(true, key: .isLogin)
-        UIApplication.shared.setRootVC(vc)
+        let nav = UINavigationController(rootViewController: vc)
+        UIApplication.shared.setRootVC(nav)
         
     }
 }
