@@ -52,19 +52,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 
-extension SceneDelegate {
+extension SceneDelegate   {
     
     func setUpController(){
         
         guard  let isLogin = CustomUserDefaults.shared.get(key: .isLogin) as? Bool, isLogin else {
             return
         }
-
-        let vc = HomeTabBarController.instantiateViewController()
-        CustomUserDefaults.shared.set(true, key: .isLogin)
-        let nav = UINavigationController(rootViewController: vc)
-        UIApplication.shared.setRootVC(nav)
-        
+        self.intializeHomeViewController()
     }
 }
 
+extension SceneDelegate : UISplashDelegate  {
+  
+}
+
+
+protocol UISplashDelegate {
+    func intializeHomeViewController()
+}
+
+extension UISplashDelegate where Self : SceneDelegate{
+    
+    func intializeHomeViewController(){
+        let vc = HomeTabBarController.instantiateViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        UIApplication.shared.setRootVC(nav)
+    }
+}

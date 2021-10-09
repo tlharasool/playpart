@@ -37,7 +37,7 @@ struct ServerResponseModel{
 }
 
 
-struct VideoData
+class VideoData
 {
     let id: Int
     let name: String
@@ -45,7 +45,7 @@ struct VideoData
     let updated_at: TimeInterval
     let result_video_url: String
     let description: String
-    let reaction: Int
+    var reaction: Reaction!
     
     init(_ dictionary:[String: Any]){
         self.id = dictionary["id"] as? Int ?? 0
@@ -53,9 +53,30 @@ struct VideoData
         self.created_at = dictionary["created_at"] as? TimeInterval ?? 0
         self.updated_at = dictionary["updated_at"] as? TimeInterval ?? 0
         self.result_video_url = dictionary["result_video_url"] as? String ?? ""
-        self.description = dictionary["result_video_url"] as? String ?? ""
+        self.description = dictionary["description"] as? String ?? ""
+        self.reaction = Reaction((dictionary["reaction"] as? [String : Any]) ?? [:])
+    }
+}
+
+class Reaction{
+    
+    let id: Int
+    var reaction: Int
+    let user_id : Int
+    let created_at: TimeInterval
+    let updated_at: TimeInterval
+    var video_id : Int
+    
+    init(_ dictionary:[String: Any]){
+        self.id = dictionary["id"] as? Int ?? 0
+     
+        self.created_at = dictionary["created_at"] as? TimeInterval ?? 0
+        self.updated_at = dictionary["updated_at"] as? TimeInterval ?? 0
+        self.video_id = dictionary["video_id"] as? Int ?? 0
+        self.user_id = dictionary["user_id"] as? Int ?? 0
         self.reaction = dictionary["reaction"] as? Int ?? 0
     }
+
 }
 
 //struct ServerResponseModel{

@@ -178,9 +178,7 @@ class LoginViewController: UIViewController{
                 self.stopLoader(loader: loader, completionHandler: { [self] in
                 //    popScreenAfterLogginAndSignUp()
                     
-                    let vc = HomeTabBarController.instantiateViewController()
-                    let nav = UINavigationController(rootViewController: vc)
-                    UIApplication.shared.setRootVC(nav)
+                    self.intializeHomeViewController()
                     
                 })
           
@@ -188,9 +186,7 @@ class LoginViewController: UIViewController{
         })
     }
 }
-extension LoginViewController{
-    
-}
+
 extension LoginViewController{
     
     private func setEmailTxtFldProperties(){
@@ -263,5 +259,16 @@ extension UIViewController{
         alertController.addAction(OKAction)
         
         self.present(alertController, animated: true, completion:nil)
+    }
+}
+
+
+
+extension UIViewController{
+    
+    func intializeHomeViewController(){
+        let vc = HomeTabBarController.instantiateViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        UIApplication.shared.setRootVC(nav)
     }
 }

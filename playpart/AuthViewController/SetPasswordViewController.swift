@@ -14,6 +14,9 @@ class SetPasswordViewController: UIViewController {
     @IBOutlet weak var PasswordField: UITextField!
     @IBOutlet weak var ConfirmPasswordField: UITextField!
     private let primaryColor = AppColor.primaryColor
+    
+    let apiHandler = API_Handler.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFields()
@@ -66,8 +69,23 @@ extension SetPasswordViewController{
                 present(alert, animated: true)
             }
             else{
-                
+                let loader = loader(msg: "Updating password")
                 print("OK")
+                
+                apiHandler.updatePassword(password: PasswordField.text!) {
+                    loader.dismiss(animated: true) {
+                        
+                        self.showToast(message: "Password updated", fontSize: 12)
+                    }
+                  
+                } failure: { err in
+                    
+                    loader.dismiss(animated: true) {
+                        self.showToast(message: err, fontSize: 12)
+                    }
+                }
+
+                
             }
         }
     }

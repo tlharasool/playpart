@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class AccountTableViewController : UITableViewController {
     
     @IBOutlet weak var staticTableViewCell1: UITableViewCell!
@@ -30,7 +28,7 @@ class AccountTableViewController : UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.hideBar()
+        self.navigationController?.hideBar(false)
     }
     
     func backgroundColor()
@@ -43,6 +41,9 @@ class AccountTableViewController : UITableViewController {
         self.section3cell1.backgroundColor = UIColor.black
         
     }
+    
+
+
 }
 
 
@@ -50,6 +51,7 @@ class AccountTableViewController : UITableViewController {
 extension AccountTableViewController{
     
   private func integrateActionOnSection(){
+    section2cell2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(addTapOnPrivacy(_:))))
         section2cell4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(addTapOnLogout(_:))))
         section2cell3.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(addTapOnAccount(_:))))
     }
@@ -60,6 +62,9 @@ extension AccountTableViewController{
 extension AccountTableViewController{
     
     @objc func addTapOnPrivacy(_ sender : UITapGestureRecognizer){
+        
+        let vc = PDFController()
+        self.present(vc, animated: true, completion: nil)
         
     }
     
@@ -90,4 +95,28 @@ extension AccountTableViewController{
 
 extension AccountTableViewController : StoryboardInitializable{
     static var storyboardName: UIStoryboard.Storyboard{ return .main}
+}
+
+
+
+import UIKit
+import PDFKit
+
+class PDFController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Add PDFView to view controller.
+        let pdfView = PDFView(frame: self.view.bounds)
+        self.view.addSubview(pdfView)
+
+        // Fit content in PDFView.
+        pdfView.autoScales = true
+
+        // Load Sample.pdf file.
+        let fileURL = Bundle.main.url(forResource: "privacyPolicy", withExtension: "pdf")
+        pdfView.document = PDFDocument(url: fileURL!)
+    }
+
 }

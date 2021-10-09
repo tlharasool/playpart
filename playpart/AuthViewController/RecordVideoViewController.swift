@@ -16,43 +16,38 @@ class RecordVideoViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var cameraView : UIView!
     @IBOutlet weak var cameraBtnView : UIImageView!
     @IBOutlet weak var galleryBtn : UIButton!
-
-    @objc func actionOnGallery(_ sender : UIButton){
-        self.openGallery()
-    }
-    
-    lazy var cameraController : CamerViewController = {
-        let controller = CamerViewController.instantiateViewController()
-        self.add(asChildViewController: controller, to: cameraView)
-        return controller
-    }()
     
     var miliSeconds : Int = 0
     var longPressRecognizer : UILongPressGestureRecognizer!
     var picker:UIImagePickerController? = UIImagePickerController()
+    var cameraConfig: CameraConfiguration!
+    
+    var videoRecordingStarted: Bool = false {
+        didSet{
+            if videoRecordingStarted {
+                // self.cameraButton.backgroundColor = UIColor.red
+            } else {
+                // self.cameraButton.backgroundColor = UIColor.white
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tabItem = UITabBar()
-        tabItem.isHidden = true
-        picker?.delegate = self
-        self.backBtn.addTarget(self, action: #selector(actionOnBackBtn(_:)), for: .touchUpInside)
-        
-        cameraBtnView.isUserInteractionEnabled = true
-        longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPress(gesture:)))
-        longPressRecognizer.numberOfTouchesRequired = 1
-        longPressRecognizer.minimumPressDuration = 0.5
-        self.cameraBtnView.addGestureRecognizer(longPressRecognizer)
-        galleryBtn.addTarget(self, action: #selector(actionOnGallery(_:)), for: .touchUpInside)
+        self.view.backgroundColor = UIColor.black
+        setUpCameraConfigurations()
+        hideTabBar()
+        addActionsOnBtn()
+        setGestureOnCameraRecordingBtn()
+        setGalleryPickerDelegate()
         
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.cameraController.startCameraSession()
+        //self.cameraController.startCameraSession()
         self.view.bringSubviewToFront(backBtn)
         self.view.bringSubviewToFront(cameraBtnView)
         self.view.bringSubviewToFront(galleryBtn)
@@ -66,9 +61,24 @@ class RecordVideoViewController: UIViewController, UIGestureRecognizerDelegate {
         self.tabBarController?.tabBar.isHidden = false
     }
     
+}
+
+extension RecordVideoViewController{
+    @objc func actionOnBackBtn(_ sender : UIButton){
+       // self.tabBarController?.selectedIndex = 0
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+extension RecordVideoViewController : StoryboardInitializable{
+    
+    static var storyboardName: UIStoryboard.Storyboard{return .home}
+}
+
+extension RecordVideoViewController{
+    
     func openCameraController(){
-        cameraController.view.frame = self.view.frame
-        view.addSubview(cameraController.view)
+        //        cameraController.view.frame = self.view.frame
+        //        view.addSubview(cameraController.view)
         
     }
     
@@ -107,16 +117,7 @@ class RecordVideoViewController: UIViewController, UIGestureRecognizerDelegate {
                 
             }
         }
-
-    }
-    
-    
-}
-
-
-extension RecordVideoViewController{
-    @objc func actionOnBackBtn(_ sender : UIButton){
-        self.tabBarController?.selectedIndex = 0
+        
     }
 }
 
@@ -152,12 +153,8 @@ extension RecordVideoViewController{
             self.miliSeconds = 0
             print("Began")
             
-            self.cameraController.record { videoURL in
-                self.openDescriptionController(videoURL)
-            } error: { error in
-                print("Error")
-            }
             
+            self.recordVideo()
             UIView.animate(withDuration: 0.1,
                            animations: {
                             self.cameraBtnView.transform = CGAffineTransform(scaleX: 2, y: 2)
@@ -175,7 +172,7 @@ extension RecordVideoViewController{
             
         case .ended:
             print("ended")
-            self.cameraController.stopMovieRecording()
+            self.stopVideo()
             UIView.animate(withDuration: 0.1,
                            animations: {
                             self.cameraBtnView.transform = .identity
@@ -183,7 +180,7 @@ extension RecordVideoViewController{
             longPressRecognizer.isEnabled = true
             miliSeconds = 0
         case .cancelled:
-            self.cameraController.stopMovieRecording()
+            self.stopVideo()
             print("cancelled")
             UIView.animate(withDuration: 0.1,
                            animations: {
@@ -199,5 +196,84 @@ extension RecordVideoViewController{
     }
     
 }
+//MARK:- Video Recording And Stop Functions
+extension RecordVideoViewController{
+    
+    private func recordVideo(){
+        self.cameraConfig.recordVideo { url, err in
+            if err != nil{
+                let cameraError = err?.localizedDescription ?? ""
+                self.showToast(message: cameraError , fontSize: 12)
+                return
+            }
+            guard let url = url else {return}
+            self.openDescriptionController(url)
+        }
+    }
+    
+    private func stopVideo(){
+        self.cameraConfig.stopRecording { err in
+            print("\n\n")
+            print("The stop video error if any",err?.localizedDescription)
+        }
+    }
+}
 
 
+extension RecordVideoViewController{
+    
+    @objc func actionOnGallery(_ sender : UIButton){
+        self.openGallery()
+    }
+    
+    private func setGalleryPickerDelegate(){
+        picker?.delegate = self
+    }
+    
+    private func addActionsOnBtn(){
+        
+        backBtn.addTarget(self, action: #selector(actionOnBackBtn(_:)), for: .touchUpInside)
+        galleryBtn.addTarget(self, action: #selector(actionOnGallery(_:)), for: .touchUpInside)
+        
+    }
+    
+    private func setGestureOnCameraRecordingBtn(){
+        
+        cameraBtnView.isUserInteractionEnabled = true
+        longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPress(gesture:)))
+        longPressRecognizer.numberOfTouchesRequired = 1
+        longPressRecognizer.minimumPressDuration = 0.5
+        self.cameraBtnView.addGestureRecognizer(longPressRecognizer)
+    }
+    
+    private func hideTabBar(){
+        let tabItem = UITabBar()
+        tabItem.isHidden = true
+    }
+    
+    private func setUpCameraConfigurations(){
+        self.cameraView.alpha = 0
+        self.cameraConfig = CameraConfiguration()
+        
+        cameraConfig.setup { (error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            do {
+                try self.cameraConfig.displayPreview(self.view)
+            }catch let err{
+                self.showToast(message: err.localizedDescription, fontSize: 12)
+            }
+            
+        }
+    }
+    
+}
+
+
+
+//    lazy var cameraController : CamerViewController = {
+//        let controller = CamerViewController.instantiateViewController()
+//        self.add(asChildViewController: controller, to: cameraView)
+//        return controller
+//    }()

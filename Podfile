@@ -7,7 +7,6 @@ target 'playpart' do
   
 pod 'SwiftKeychainWrapper'
 pod 'IQKeyboardManagerSwift'
-pod 'LongPressRecordButton'
 pod 'Alamofire'
 pod 'MMPlayerView'
 end

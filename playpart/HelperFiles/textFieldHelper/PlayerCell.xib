@@ -21,7 +21,6 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-dq-T8r">
                                 <rect key="frame" x="0.0" y="0.0" width="270" height="184"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,6 +41,9 @@
                 <constraint firstAttribute="bottom" secondItem="q6f-iz-ogW" secondAttribute="bottom" id="iST-vh-waF"/>
             </constraints>
             <size key="customSize" width="270" height="184"/>
+            <connections>
+                <outlet property="imgView" destination="1Pt-dq-T8r" id="0Ry-oH-nQH"/>
+            </connections>
             <point key="canvasLocation" x="210.1449275362319" y="132.58928571428572"/>
         </collectionViewCell>
     </objects>

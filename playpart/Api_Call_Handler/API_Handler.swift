@@ -24,7 +24,9 @@ struct APIURL{
     static let register = "auth/sign_up"
     static let Login = "auth/login"
     static let video = "videos"
+    static let reaction = "reactions"
     static let get_video_list = "videos/get_video_list"
+    static let users = "users"
     
 }
 
@@ -74,6 +76,10 @@ class API_Handler{
                         print("Access Token => \(accessToken)")
                         print("User Id => \(userId)")
                         
+                        let saveAccessToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: AppKey.accessToken.value)
+
+                        print("Access Token => \(saveAccessToken)")
+                        
                         //let saveAccessToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "sccessToken")
                         //let saveUSerID: Bool = KeychainWrapper.standard.set(userId!, forKey: "userId")
                         //print("Access Token => \(saveAccessToken)")
@@ -116,15 +122,108 @@ class API_Handler{
 extension API_Handler{
     
     
+    func updatePassword(password : String, success: @escaping ()->Void, failure : @escaping (String)->()){
+        
+        let url = APIURL.baseURL + APIURL.users
+        let headers = getHeaders()
+        let parameter = ["password_confirmation" : password, "password" : password]
+        
+        AF.request(url, method: .put, parameters: parameter, headers: [headers]).responseJSON { response in
+            debugPrint(response.result)
+            switch response.result{
+            case .success(let data):
+            
+                if let json  = data as? [String : Any]{
+                    
+                    guard let isSuccess  = json["success"] as? Bool, isSuccess == true else {
+                        failure("Unable to update password")
+                        return
+                    }
+                    success()
+                }else{
+                    failure("Unable to update password")
+                }
+            case .failure(let err):
+                print("Error is here",err)
+                failure(err.localizedDescription)
+            }
+            
+        }
+        
+    }
+    
+    func setNewReaction(reaction : Int,videoID : Int, success : @escaping ()->(), failure : @escaping (String)->()){
+        
+        let url = APIURL.baseURL + APIURL.reaction
+        let headers = getHeaders()
+        let parameter = ["reaction" : reaction,"video_id" : videoID]
+        
+        AF.request(url, method: .post, parameters: parameter, headers: [headers]).responseJSON { response in
+            debugPrint(response.result)
+            switch response.result{
+            case .success(let data):
+            
+                if let json  = data as? [String : Any]{
+                    
+                    guard let isSuccess  = json["success"] as? Bool, isSuccess == true else {
+                        failure("Unable to update password")
+                        return
+                    }
+                    success()
+                }else{
+                    failure("Unable to update password")
+                }
+            case .failure(let err):
+                print("Error is here",err)
+                failure(err.localizedDescription)
+            }
+            
+        }
+    
+    }
+    
+    
+    func updateNewReaction(reaction : Int, reactionID : Int,success : @escaping ()->(), failure : @escaping (String)->()){
+        
+        let url = APIURL.baseURL + APIURL.reaction + "/\(reactionID)"
+        let headers = getHeaders()
+        let parameter = ["reaction" : reaction]
+        
+        print("The URL is here",url)
+        AF.request(url, method: .put, parameters: parameter, headers: [headers]).responseJSON { response in
+            debugPrint(response.result)
+            switch response.result{
+            case .success(let data):
+            
+                if let json  = data as? [String : Any]{
+                    
+                    guard let isSuccess  = json["success"] as? Bool, isSuccess == true else {
+                        failure("Unable to update password")
+                        return
+                    }
+                    success()
+                }else{
+                    failure("Unable to update password")
+                }
+            case .failure(let err):
+                print("Error is here",err)
+                failure(err.localizedDescription)
+            }
+            
+        }
+    
+    }
+    
+    
     func getHeaders()->HTTPHeader{
         let token  = KeychainWrapper.standard.string(forKey: AppKey.accessToken.value)
         let headers : HTTPHeader = HTTPHeader.init(name: "Authorization", value: "Bearer \(token!)")
         
         return headers
     }
-    func getAllVideos(success: @escaping ([VideoData])->Void, failure : @escaping (String)->()){
+    func getAllVideos(page : Int = 1,success: @escaping ([VideoData])->Void, failure : @escaping (String)->()){
         
-        let videoList = APIURL.baseURL + APIURL.get_video_list
+        let videoList = APIURL.baseURL + APIURL.get_video_list + "?page\(page)&per_page=20"
         let headers = getHeaders()
         
         AF.request(videoList,headers: [headers]).responseJSON { response in

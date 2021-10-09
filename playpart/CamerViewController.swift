@@ -25,14 +25,35 @@ class CamerViewController : UIViewController, StoryboardInitializable, AVCapture
     var movieOutput = AVCaptureMovieFileOutput()
     var videoCaptureDevice : AVCaptureDevice?
         
+    var backCamera : AVCaptureDevice!
+    var frontCamera : AVCaptureDevice!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         captureSession!.sessionPreset = AVCaptureSession.Preset.photo
-        let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
+
        
+        let session = AVCaptureDevice.DiscoverySession.init(deviceTypes:[.builtInWideAngleCamera, .builtInMicrophone], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
+        
+        let cameras = (session.devices.compactMap{$0})
+                
+        for camera in cameras {
+            if camera.position == .front {
+                self.frontCamera = camera
+            }
+            if camera.position == .back {
+                self.backCamera = camera
+                
+//                try camera.lockForConfiguration()
+//                camera.focusMode = .continuousAutoFocus
+//                camera.unlockForConfiguration()
+            }
+        }
+        
+        
         var error: NSError?
         var input: AVCaptureDeviceInput!
         do {

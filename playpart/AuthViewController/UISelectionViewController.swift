@@ -357,10 +357,9 @@ class UISelectionViewController: UIViewController {
     
     
     @IBAction func actionOnTap(_ sender : UITapGestureRecognizer){
-        
-        let vc = HomeTabBarController.instantiateViewController()
+
         CustomUserDefaults.shared.set(true, key: .isLogin)
-        UIApplication.shared.setRootVC(vc)
+        self.intializeHomeViewController()
     }
     
 }

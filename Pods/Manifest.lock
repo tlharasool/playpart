@@ -1,14 +1,12 @@
 PODS:
   - Alamofire (5.4.3)
   - IQKeyboardManagerSwift (6.5.6)
-  - LongPressRecordButton (1.5.0)
   - MMPlayerView (6.0.2)
   - SwiftKeychainWrapper (4.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - IQKeyboardManagerSwift
-  - LongPressRecordButton
   - MMPlayerView
   - SwiftKeychainWrapper
 
@@ -16,17 +14,15 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - IQKeyboardManagerSwift
-    - LongPressRecordButton
     - MMPlayerView
     - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
-  LongPressRecordButton: 5db73b859708bbe86edb4e10f1a1eea9a6d9adb7
   MMPlayerView: e28bace82369bcfbfbe29f9dcd30eeb641a46754
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
 
-PODFILE CHECKSUM: 95cade8d84bfcf3a995dbbf37f46e1d678b1b75a
+PODFILE CHECKSUM: 0a3005a0b7d6a888d41f03cc7574914dd637d403
 
 COCOAPODS: 1.10.2

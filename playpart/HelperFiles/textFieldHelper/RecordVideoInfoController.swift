@@ -15,7 +15,7 @@ class RecordVideoInfoController : UIViewController, UITextViewDelegate{
     
     var videoURL : URL!
     let apiHandler = API_Handler.shared
-    
+    let placeHolder = "Tap here to\n write a\ndescription..."
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class RecordVideoInfoController : UIViewController, UITextViewDelegate{
         
         backBtnOutlet.addTarget(self, action: #selector(setBackAction(_:)), for: .touchUpInside)
         
-        descriptionTextField.text = "Tap here to\n write a\ndescription..."
+        descriptionTextField.text = placeHolder
         descriptionTextField.textColor = UIColor.init(rgb: 0xB6C938)
         descriptionTextField.font = UIFont(name: "Montserrat", size: 23.2)
         descriptionTextField.returnKeyType = .done
@@ -42,7 +42,7 @@ class RecordVideoInfoController : UIViewController, UITextViewDelegate{
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         
-        if descriptionTextField.text == "Tap here to\n write a\ndescription..." {
+        if descriptionTextField.text == placeHolder{
             descriptionTextField.text = ""
             descriptionTextField.textColor = UIColor.init(rgb: 0xB6C938)
             descriptionTextField.font = UIFont(name: "Montserrat", size: 18.0)
@@ -60,7 +60,7 @@ class RecordVideoInfoController : UIViewController, UITextViewDelegate{
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if descriptionTextField.text == "" {
-            descriptionTextField.text = "Tap here to\n write a\ndescription..."
+            descriptionTextField.text = placeHolder
             descriptionTextField.textColor = UIColor.init(rgb: 0xB6C938)
             descriptionTextField.font = UIFont(name: "Montserrat", size: 23.2)
         }
@@ -69,32 +69,48 @@ class RecordVideoInfoController : UIViewController, UITextViewDelegate{
     
     @IBAction func actionOnPublic(_ sender: Any) {
         
-        let loader = self.loader()
+       
         
-        if let text = descriptionTextField.text , !text.isEmpty{
+        if let text = descriptionTextField.text , (!text.isEmpty){
             
            
+            if (placeHolder !=  text){
+                let loader = self.loader()
                 let timestamp = NSDate().timeIntervalSince1970
                 self.apiHandler.uploadVideo(text, self.videoURL, "\(timestamp)") {
                     
                     loader.dismiss(animated: true) {
                         
+                        NotificationCenter.default.post(name: .updateVideoPlayer, object: nil)
+                        
                         self.showAlertWithAction(messageToDisplay: "Video uploaded successfully") {
+                            print("Called")
                             self.dismiss(animated: true, completion: nil)
                         }
                     }
                 } failure: { err in
                     loader.dismiss(animated: true) {
                         
-                        self.showAlertWithAction(messageToDisplay: err) {
-                            self.navigationController?.popController()
+                        let alertController = UIAlertController(title: nil, message: err, preferredStyle: .alert)
+                        
+                        let OKAction = UIAlertAction(title: "Done", style: .default) { (action:UIAlertAction!) in
+                            alertController.dismiss(animated: true) {
+                                self.navigationController?.popController()
+                            }
                         }
+                        alertController.addAction(OKAction)
+                        
+                        self.present(alertController, animated: true, completion:nil)
                     }
                 }
                 
-            
+            }else{
+                self.showToast(message: "Please enter description", fontSize: 12)
+                
+            }
         }else{
-            self.showAlertWithAction(messageToDisplay: "Description is empty") {}
+            
+            self.showToast(message: "Please enter description", fontSize: 12)
         }
       
     }
