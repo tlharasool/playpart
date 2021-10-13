@@ -124,30 +124,30 @@
                                     <constraint firstAttribute="height" constant="15" id="byl-Vu-a2A"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.71267604829999998" green="0.79462224250000002" blue="0.14503791930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cyg-E6-7Ct">
-                                <rect key="frame" x="168" y="678" width="78" height="24"/>
+                                <rect key="frame" x="168" y="678" width="78" height="0.0"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-9j-Ew7">
-                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" backgroundImage="ic_facebook"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6u-8A-PF2">
-                                        <rect key="frame" x="54" y="0.0" width="24" height="24"/>
+                                        <rect key="frame" x="54" y="0.0" width="24" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" backgroundImage="ic_google"/>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="o01-Fo-m7X"/>
-                                    <constraint firstAttribute="height" constant="24" id="p9v-cm-oVR"/>
+                                    <constraint firstAttribute="height" id="p9v-cm-oVR"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX9-91-t9h">
-                                <rect key="frame" x="112" y="717" width="170" height="21"/>
+                                <rect key="frame" x="112" y="688" width="170" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="ScA-dY-xSj"/>
                                     <constraint firstAttribute="height" constant="21" id="fv2-JE-lTb"/>
@@ -157,7 +157,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WCs-cL-MBh">
-                                <rect key="frame" x="282" y="712" width="41" height="28"/>
+                                <rect key="frame" x="282" y="683" width="41" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="41" id="Wnh-Fw-3nN"/>
                                     <constraint firstAttribute="height" constant="28" id="skY-LZ-Eeb"/>
@@ -205,7 +205,7 @@
                             <constraint firstItem="Gi8-EH-SwG" firstAttribute="centerX" secondItem="bed-Oa-jV8" secondAttribute="centerX" id="ckd-9K-qkF"/>
                             <constraint firstItem="cyg-E6-7Ct" firstAttribute="top" secondItem="e3K-js-gDX" secondAttribute="bottom" constant="20" id="fyL-mH-pTk"/>
                             <constraint firstItem="2aU-ap-hHe" firstAttribute="top" secondItem="IAV-lZ-6MK" secondAttribute="top" constant="20" id="n8B-Eq-DBt"/>
-                            <constraint firstItem="iX9-91-t9h" firstAttribute="top" secondItem="cyg-E6-7Ct" secondAttribute="bottom" constant="15" id="ngO-sC-NNq"/>
+                            <constraint firstItem="iX9-91-t9h" firstAttribute="top" secondItem="cyg-E6-7Ct" secondAttribute="bottom" constant="10" id="ngO-sC-NNq"/>
                             <constraint firstItem="e3K-js-gDX" firstAttribute="top" secondItem="Gi8-EH-SwG" secondAttribute="bottom" constant="23" id="oEg-fq-MiC"/>
                             <constraint firstItem="C1o-IF-llL" firstAttribute="top" secondItem="514-dJ-yAx" secondAttribute="bottom" constant="60" id="q2M-W3-Y44"/>
                             <constraint firstItem="Gi8-EH-SwG" firstAttribute="top" secondItem="C1o-IF-llL" secondAttribute="bottom" constant="25" id="wVm-bm-iOe"/>
@@ -301,7 +301,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN5-ef-gW2">
-                                <rect key="frame" x="142" y="693.5" width="130" height="13.5"/>
+                                <rect key="frame" x="142" y="659.5" width="130" height="13.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
                                 <color key="textColor" red="0.63817673919999995" green="0.71559959650000005" blue="0.12990093229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -339,25 +339,25 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Rpi-cF-HKf">
-                                <rect key="frame" x="168" y="649.5" width="78" height="24"/>
+                                <rect key="frame" x="168" y="649.5" width="78" height="0.0"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNs-we-dmi">
-                                        <rect key="frame" x="0.0" y="0.0" width="26.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="26.5" height="0.0"/>
                                         <state key="normal" image="ic_facebook"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flN-NL-ftd">
-                                        <rect key="frame" x="51.5" y="0.0" width="26.5" height="24"/>
+                                        <rect key="frame" x="51.5" y="0.0" width="26.5" height="0.0"/>
                                         <state key="normal" image="ic_google"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="Qaa-OX-dJv"/>
+                                    <constraint firstAttribute="height" id="Qaa-OX-dJv"/>
                                     <constraint firstAttribute="width" constant="78" id="bRa-OK-YDJ"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4f-MR-rvH">
-                                <rect key="frame" x="274" y="686.5" width="42" height="25"/>
+                                <rect key="frame" x="274" y="652.5" width="42" height="25"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Sign Up">
@@ -385,7 +385,7 @@
                             <constraint firstItem="vcP-3d-bYf" firstAttribute="top" secondItem="ahQ-8v-Pac" secondAttribute="bottom" constant="15" id="6Ib-Zv-MkR"/>
                             <constraint firstItem="nCo-os-ShX" firstAttribute="trailing" secondItem="pbf-r3-til" secondAttribute="trailing" constant="30" id="BHd-p1-ixI"/>
                             <constraint firstItem="GNR-Ei-xYj" firstAttribute="centerX" secondItem="1ML-BH-3rE" secondAttribute="centerX" id="Icv-Yj-ZLZ"/>
-                            <constraint firstItem="PN5-ef-gW2" firstAttribute="top" secondItem="Rpi-cF-HKf" secondAttribute="bottom" constant="20" id="JW4-eE-N5s"/>
+                            <constraint firstItem="PN5-ef-gW2" firstAttribute="top" secondItem="Rpi-cF-HKf" secondAttribute="bottom" constant="10" id="JW4-eE-N5s"/>
                             <constraint firstItem="Rpi-cF-HKf" firstAttribute="centerX" secondItem="d6L-zU-kbD" secondAttribute="centerX" id="JdT-DG-Exx"/>
                             <constraint firstItem="pbf-r3-til" firstAttribute="centerY" secondItem="1ML-BH-3rE" secondAttribute="centerY" id="OHW-9L-4wl"/>
                             <constraint firstItem="vcP-3d-bYf" firstAttribute="centerX" secondItem="1ML-BH-3rE" secondAttribute="centerX" id="RGL-pA-qPh"/>
