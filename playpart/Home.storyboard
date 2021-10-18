@@ -674,6 +674,100 @@
             </objects>
             <point key="canvasLocation" x="891" y="335"/>
         </scene>
+        <!--Policy View Controller-->
+        <scene sceneID="WJ3-Ll-KII">
+            <objects>
+                <viewController storyboardIdentifier="PolicyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AoE-NT-oWj" customClass="PolicyViewController" customModule="playpart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vKQ-XF-r9x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1L-Uw-oRb">
+                                <rect key="frame" x="0.0" y="1.5" width="414" height="806.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CxQ-AY-Rb0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="2.5"/>
+                                <color key="progressTintColor" red="0.71267604829999998" green="0.79462224250000002" blue="0.14503791930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckS-e5-N72">
+                                <rect key="frame" x="0.0" y="725" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="GDb-Vd-JPy">
+                                        <connections>
+                                            <action selector="backAction:" destination="AoE-NT-oWj" id="7Ws-6M-vGt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="VdL-Rs-vky">
+                                        <connections>
+                                            <action selector="forwardAction:" destination="AoE-NT-oWj" id="y3d-ES-apT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pXQ-C3-r8L"/>
+                                    <barButtonItem systemItem="refresh" id="71y-ZP-IHq">
+                                        <connections>
+                                            <action selector="refreshAction:" destination="AoE-NT-oWj" id="Hnf-I2-IUI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XDN-Nm-za1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ckS-e5-N72" firstAttribute="leading" secondItem="vKQ-XF-r9x" secondAttribute="leading" id="1fF-vK-VZX"/>
+                            <constraint firstItem="CxQ-AY-Rb0" firstAttribute="top" secondItem="XDN-Nm-za1" secondAttribute="top" id="DRj-cf-Lh6"/>
+                            <constraint firstItem="t1L-Uw-oRb" firstAttribute="top" secondItem="CxQ-AY-Rb0" secondAttribute="bottom" id="DV6-7D-jwk"/>
+                            <constraint firstItem="XDN-Nm-za1" firstAttribute="bottom" secondItem="ckS-e5-N72" secondAttribute="bottom" id="GJO-Lm-l14"/>
+                            <constraint firstItem="CxQ-AY-Rb0" firstAttribute="leading" secondItem="vKQ-XF-r9x" secondAttribute="leading" id="OFD-p4-yhl"/>
+                            <constraint firstAttribute="bottom" secondItem="t1L-Uw-oRb" secondAttribute="bottom" id="P1g-T2-iuc"/>
+                            <constraint firstAttribute="trailing" secondItem="CxQ-AY-Rb0" secondAttribute="trailing" id="ULW-q1-8p3"/>
+                            <constraint firstItem="t1L-Uw-oRb" firstAttribute="leading" secondItem="XDN-Nm-za1" secondAttribute="leading" id="f0l-YP-xk6"/>
+                            <constraint firstItem="t1L-Uw-oRb" firstAttribute="trailing" secondItem="XDN-Nm-za1" secondAttribute="trailing" id="nPX-8H-reJ"/>
+                            <constraint firstItem="XDN-Nm-za1" firstAttribute="trailing" secondItem="ckS-e5-N72" secondAttribute="trailing" id="nn9-Mq-axQ"/>
+                            <constraint firstItem="ckS-e5-N72" firstAttribute="top" secondItem="vKQ-XF-r9x" secondAttribute="bottom" constant="-83" id="xng-NI-MpK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QUH-pv-TFH">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="QlV-UW-XIK">
+                            <color key="tintColor" red="0.71372549019999998" green="0.79607843140000001" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backBtnAction:" destination="AoE-NT-oWj" id="JOk-fc-SOX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="CxQ-AY-Rb0" id="YvK-a9-dBZ"/>
+                        <outlet property="webView" destination="t1L-Uw-oRb" id="ito-Ws-O4o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjb-YU-Z5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3600" y="311"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NIL-5v-aB5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Ql-R5-zY9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="oE9-4e-T5x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AoE-NT-oWj" kind="relationship" relationship="rootViewController" id="Jhf-2N-aoK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3c4-sE-oSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2671" y="311"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Group" width="21.5" height="26"/>

@@ -7,6 +7,8 @@
 
 
 import UIKit
+import SwiftKeychainWrapper
+
 
 class AccountTableViewController : UITableViewController {
     
@@ -75,6 +77,10 @@ extension AccountTableViewController{
     }
     
     @objc func addTapOnLogout(_ sender : UITapGestureRecognizer){
+        
+        CustomUserDefaults.shared.set(false, key: .isLogin)
+        //KeychainWrapper.standard.set(accessToken, forKey: AppKey.accessToken.value)
+        KeychainWrapper.standard.remove(forKey: KeychainWrapper.Key(rawValue: AppKey.accessToken.value) ?? "")
         let vc = LoginViewController.instantiateViewController()
         let nav = UINavigationController(rootViewController: vc)
         UIApplication.shared.setRootVC(nav)

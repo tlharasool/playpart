@@ -23,13 +23,15 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Playpart want to access your camera</string>
+	<string>Camera is required so you can record playpart videos.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Playpart want to access your microphone</string>
+	<string>Micophone is required so you can record audios of playpart videos</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Playpart want to access your photos</string>
+	<string>PlayPart would like to access your photos
+You will be able to upload video.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Playpart want to access your library</string>
+	<string>PlayPart would like to access your photos
+You will be able to upload video.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Montserrat-Regular.ttf</string>

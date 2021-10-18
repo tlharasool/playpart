@@ -23,6 +23,7 @@
 		BC7226D1270F29EF00636E34 /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7226CF270F29EF00636E34 /* PlayerCell.xib */; };
 		BC7226D5270F2AC600636E34 /* CoverA.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7226D3270F2AC600636E34 /* CoverA.xib */; };
 		BC7226D6270F2AC600636E34 /* CoverA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7226D4270F2AC600636E34 /* CoverA.swift */; };
+		BC76C323271D7AF9003D7344 /* PolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76C322271D7AF9003D7344 /* PolicyViewController.swift */; };
 		BC813E93270304D10051E577 /* ASVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E90270304D10051E577 /* ASVideoController.swift */; };
 		BC813E94270304D10051E577 /* ASVideoLayerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E91270304D10051E577 /* ASVideoLayerObject.swift */; };
 		BC813E95270304D10051E577 /* ASvideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC813E92270304D10051E577 /* ASvideoPlayerController.swift */; };
@@ -78,6 +79,7 @@
 		BC7226CF270F29EF00636E34 /* PlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
 		BC7226D3270F2AC600636E34 /* CoverA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverA.xib; sourceTree = "<group>"; };
 		BC7226D4270F2AC600636E34 /* CoverA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverA.swift; sourceTree = "<group>"; };
+		BC76C322271D7AF9003D7344 /* PolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyViewController.swift; sourceTree = "<group>"; };
 		BC813E90270304D10051E577 /* ASVideoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASVideoController.swift; sourceTree = "<group>"; };
 		BC813E91270304D10051E577 /* ASVideoLayerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASVideoLayerObject.swift; sourceTree = "<group>"; };
 		BC813E92270304D10051E577 /* ASvideoPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASvideoPlayerController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		BC813E882702FCE50051E577 /* AuthViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BC76C322271D7AF9003D7344 /* PolicyViewController.swift */,
 				BCE4BF86271076AD00AC4D1C /* VideoCache */,
 				BC813EA7270314C20051E577 /* StaticaTableView.swift */,
 				E961C0DF26EF1E5E00C01F1E /* UISelectionViewController.swift */,
@@ -484,6 +487,7 @@
 				E9A8B6EA26EF717500A77F56 /* Models.swift in Sources */,
 				BC7226D0270F29EF00636E34 /* PlayerCell.swift in Sources */,
 				07FAA6C3270839C40027C816 /* PrivacyTableViewController.swift in Sources */,
+				BC76C323271D7AF9003D7344 /* PolicyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

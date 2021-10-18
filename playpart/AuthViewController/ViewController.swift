@@ -15,16 +15,23 @@ class ViewController: UIViewController{
     @IBOutlet weak var repeatPasswordTxtFld: UITextField!
     @IBOutlet weak var insertView : UIView!
     
-   // let leftViewspace = leftView()
+    @IBOutlet weak var privacyLbl: UILabel!
+    // let leftViewspace = leftView()
+    
+    let privacy_terms_text = "By tapping “Sign up”, you agree to our Terms of service and acknowledge that you have read our Privacy Policy and community guidelines"
+    
+    //
     
     let apiHandler = API_Handler.shared
     private let primaryColor = AppColor.primaryColor
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFields()
         configureTapGesture()
-        
+        setPrivacy_TermsLbl()
     }
+    
     func popUpSreenAfterSignUp(){
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(identifier: "UISelectionViewController")
@@ -56,9 +63,74 @@ extension ViewController{
         self.navigationController?.popViewController(animated: true)
         
     }
-    
-
 }
+
+extension ViewController{
+    
+    func setPrivacy_TermsLbl(){
+        
+        privacyLbl.text = privacy_terms_text
+        let underlineAttriString = NSMutableAttributedString(string: privacy_terms_text)
+        let range1 = (privacy_terms_text as NSString).range(of: "Terms of service")
+        underlineAttriString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: range1)
+       // underlineAttriString.addAttribute(NSAttributedString.Key.font, value: UIFont., range: range1)
+        underlineAttriString.addAttribute(NSAttributedString.Key.foregroundColor, value: AppColor.primaryColor, range: range1)
+        
+        
+        let range2 = (privacy_terms_text as NSString).range(of: "Privacy Policy")
+        underlineAttriString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: range2)
+       // underlineAttriString.addAttribute(NSAttributedString.Key.font, value: UIFont., range: range1)
+        underlineAttriString.addAttribute(NSAttributedString.Key.foregroundColor, value: AppColor.primaryColor, range: range2)
+        
+        let range3 = (privacy_terms_text as NSString).range(of: "community guidelines")
+        underlineAttriString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: range3)
+       // underlineAttriString.addAttribute(NSAttributedString.Key.font, value: UIFont., range: range1)
+        underlineAttriString.addAttribute(NSAttributedString.Key.foregroundColor, value: AppColor.primaryColor, range: range3)
+        
+        privacyLbl.attributedText = underlineAttriString
+        privacyLbl.isUserInteractionEnabled = true
+        privacyLbl.addGestureRecognizer(UITapGestureRecognizer(target:self, action: #selector(tapLabel(gesture:))))
+    }
+    
+    @IBAction func tapLabel(gesture: UITapGestureRecognizer) {
+        let termsRange = (privacy_terms_text as NSString).range(of: "Terms of service")
+        // comment for now
+        let privacyRange = (privacy_terms_text as NSString).range(of: "Privacy Policy")
+        let community_guidelines =  (privacy_terms_text as NSString).range(of: "community guidelines")
+        
+        if gesture.didTapAttributedTextInLabel(label: privacyLbl, inRange: termsRange) {
+            print("Tapped terms")
+            let url = "https://playpart.xyz/terms-of-service"
+            openPrivacy_Terms(url: url)
+           
+        } else if gesture.didTapAttributedTextInLabel(label: privacyLbl, inRange: privacyRange) {
+            print("Tapped privacy")
+            let url =  "https://playpart.xyz/privacy-policy"
+            openPrivacy_Terms(url: url)
+          
+        } else if gesture.didTapAttributedTextInLabel(label: privacyLbl, inRange: community_guidelines) {
+            print("community_guidelines")
+            let url =  "https://playpart.xyz/community-guidelines"
+            openPrivacy_Terms(url: url)
+           
+        }else{
+            print("Tapped none")
+        }
+    }
+    
+    
+    func openPrivacy_Terms(url : String){
+        
+        let vc = PolicyViewController.instantiateViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        vc.url = url
+        self.present(nav, animated: true, completion: nil)
+        
+    }
+    
+}
+
+
 extension ViewController{
     
     func serverSide(){
@@ -248,3 +320,39 @@ extension ViewController{
 //        }
 //
 //}
+
+
+extension UITapGestureRecognizer {
+    
+    func didTapAttributedTextInLabel(label: UILabel, inRange targetRange: NSRange) -> Bool {
+        // Create instances of NSLayoutManager, NSTextContainer and NSTextStorage
+        let layoutManager = NSLayoutManager()
+        let textContainer = NSTextContainer(size: CGSize.zero)
+        let textStorage = NSTextStorage(attributedString: label.attributedText!)
+        
+        // Configure layoutManager and textStorage
+        layoutManager.addTextContainer(textContainer)
+        textStorage.addLayoutManager(layoutManager)
+        
+        // Configure textContainer
+        textContainer.lineFragmentPadding = 0.0
+        textContainer.lineBreakMode = label.lineBreakMode
+        textContainer.maximumNumberOfLines = label.numberOfLines
+        let labelSize = label.bounds.size
+        textContainer.size = labelSize
+        
+        // Find the tapped character location and compare it to the specified range
+        let locationOfTouchInLabel = self.location(in: label)
+        let textBoundingBox = layoutManager.usedRect(for: textContainer)
+        //let textContainerOffset = CGPointMake((labelSize.width - textBoundingBox.size.width) * 0.5 - textBoundingBox.origin.x,
+        //(labelSize.height - textBoundingBox.size.height) * 0.5 - textBoundingBox.origin.y);
+        let textContainerOffset = CGPoint(x: (labelSize.width - textBoundingBox.size.width) * 0.5 - textBoundingBox.origin.x, y: (labelSize.height - textBoundingBox.size.height) * 0.5 - textBoundingBox.origin.y)
+        
+        //let locationOfTouchInTextContainer = CGPointMake(locationOfTouchInLabel.x - textContainerOffset.x,
+        // locationOfTouchInLabel.y - textContainerOffset.y);
+        let locationOfTouchInTextContainer = CGPoint(x: locationOfTouchInLabel.x - textContainerOffset.x, y: locationOfTouchInLabel.y - textContainerOffset.y)
+        let indexOfCharacter = layoutManager.characterIndex(for: locationOfTouchInTextContainer, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
+        return NSLocationInRange(indexOfCharacter, targetRange)
+    }
+    
+}
