@@ -12,15 +12,15 @@ protocol HomeCellNavigationDelegate: AnyObject {
     func navigateToProfilePage(uid: String, name: String)
 }
 
-
 class HomeTableViewCell: UITableViewCell {
     
     // MARK: - UI Components
     var playerView: VideoPlayerView!
     @IBOutlet weak var nameBtn: UIButton!
     @IBOutlet weak var captionLbl: UILabel!
-
-    //MARK:- Reaction Buttons.
+    @IBOutlet weak var reportbtnOutlet: UIButton!
+    
+    // MARK:- Reaction Buttons.
     @IBOutlet weak var worldBtnOutlet  : UIButton!{
         didSet{self.worldBtnOutlet.alpha = 0.7}
     }
@@ -36,13 +36,12 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var treeBtnOutlet   : UIButton!{
         didSet{self.treeBtnOutlet.alpha = 0.7}
     }
-    //----
-    
     @IBOutlet weak var pauseImgView: UIImageView!{
         didSet{
             pauseImgView.alpha = 0
         }
     }
+    @IBOutlet weak var reactionSetterView: UIView!
     
     // MARK: - Variables
     private(set) var isPlaying = false
@@ -50,52 +49,117 @@ class HomeTableViewCell: UITableViewCell {
     var post: VideoData?
     var reactionDict : [Int : UIButton] = [:]
     var reactionHandler : ((Int, Int)->())?
+    var isVideoFinish : (()-> Void)?
     var selectedReaction : Int = 0
     weak var delegate: HomeCellNavigationDelegate?
+    let randomInt = Int.random(in: 21..<40)
     
+    var btnArray : [Int] = []
+    //PlayPart MVP_ (20)
     // MARK: LIfecycles
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
-        reactionDict = [1 : worldBtnOutlet, 2 : wheelBtnOutlet ,3 : heartBtnOutlet,4 : animalBtnOutlet, 5 : treeBtnOutlet]
-        
-        playerView.cancelAllLoadingRequest()
-        resetViewsForReuse()
-        
-    }
 
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-     
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
         playerView = VideoPlayerView(frame: self.contentView.frame)
-//        musicLbl.holdScrolling = true
-//        musicLbl.animationDelay = 0
+        //        musicLbl.holdScrolling = true
+        //        musicLbl.animationDelay = 0
         
         
         contentView.addSubview(playerView)
         contentView.sendSubviewToBack(playerView)
+       
+        let btn1Tag = Int.random(in: 21..<40)
+        let btn2Tag = Int.random(in: 21..<40)
+        let btn3Tag = Int.random(in: 21..<40)
+        let btn4Tag = Int.random(in: 21..<40)
+        let btn5Tag = Int.random(in: 21..<40)
         
+        if !(btnArray.contains(btn1Tag)){
+            //ICONE AI-29
+            let imgName = imgName(val: btn1Tag)
+            print("The image name is here",imgName)
+            worldBtnOutlet.setImage(UIImage(named: imgName), for: .normal)
+        }else{
+            
+        }
+        
+        if !(btnArray.contains(btn2Tag)){
+            //ICONE AI-29
+            let imgName = imgName(val: btn2Tag)
+            print("The image name is here",imgName)
+            wheelBtnOutlet.setImage(UIImage(named: imgName), for: .normal)
+        }else{}
+        
+        if !(btnArray.contains(btn3Tag)){
+            //ICONE AI-29
+            let imgName = imgName(val: btn3Tag)
+            print("The image name is here",imgName)
+            heartBtnOutlet.setImage(UIImage(named: imgName), for: .normal)
+        }else{}
+        
+        if !(btnArray.contains(btn4Tag)){
+            //ICONE AI-29
+            let imgName = imgName(val: btn4Tag)
+            print("The image name is here",imgName)
+            animalBtnOutlet.setImage(UIImage(named: imgName), for: .normal)
+        }else{
+            
+        }
+        
+        if !(btnArray.contains(btn5Tag)){
+            //ICONE AI-29
+            let imgName = imgName(val: btn5Tag)
+            print("The image name is here",imgName)
+            treeBtnOutlet.setImage(UIImage(named: imgName), for: .normal)
+        }else{
+            
+        }
+
+       // treeBtnOutlet.setImage(img, for: .normal)
         let pauseGesture = UITapGestureRecognizer(target: self, action: #selector(handlePause))
         self.contentView.addGestureRecognizer(pauseGesture)
         
-//        let likeDoubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleLikeGesture(sender:)))
-//        likeDoubleTapGesture.numberOfTapsRequired = 2
-//        self.contentView.addGestureRecognizer(likeDoubleTapGesture)
-//        
-//        pauseGesture.require(toFail: likeDoubleTapGesture)
+        //        let likeDoubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleLikeGesture(sender:)))
+        //        likeDoubleTapGesture.numberOfTapsRequired = 2
+        //        self.contentView.addGestureRecognizer(likeDoubleTapGesture)
+        //
+        //        pauseGesture.require(toFail: likeDoubleTapGesture)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.reportbtnOutlet.setTitle("", for: .normal)
+            //self.button.backgroundColor = .red
+        }
     }
     
+    
+    func imgName(val : Int)-> String{
+        let imgName  = "ICONE AI-\(val)"
+        return imgName
+    }
+    
+
     @IBAction func actionOnWorld(_ sender: Any) {
-       // print("Tag is \(#function)",self.tag)
+        // print("Tag is \(#function)",self.tag)
         callReactionCompletion(1, tag)
         
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        reactionDict = [1 : worldBtnOutlet, 2 : wheelBtnOutlet ,3 : heartBtnOutlet,4 : animalBtnOutlet, 5 : treeBtnOutlet]
+        playerView.cancelAllLoadingRequest()
+        resetViewsForReuse()
+    
+    }
+    
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        reportbtnOutlet.titleLabel?.text = ""
+    }
+    
     
     @IBAction func actionOnWheel(_ sender: Any) {
         print("Tag is \(#function)",self.tag)
@@ -117,32 +181,43 @@ class HomeTableViewCell: UITableViewCell {
         callReactionCompletion(5, tag)
     }
     
+    
+    func hideReactions(){
+        self.worldBtnOutlet.alpha = 0
+        self.treeBtnOutlet.alpha = 0
+        self.animalBtnOutlet.alpha = 0
+        self.heartBtnOutlet.alpha = 0
+        self.reportbtnOutlet.alpha = 0
+        self.reactionSetterView.alpha = 0
+    }
     func configure(post: VideoData){
         self.post = post
-        
-//        nameBtn.setTitle("@" + post.autherName, for: .normal)
-//        nameBtn.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-//        musicLbl.text = post.music + "   " + post.music + "   " + post.music + "   "// Long enough to enable scrolling
-//        captionLbl.text = post.caption
-//        likeCountLbl.text = post.likeCount.shorten()
-//        //commentCountLbl.text = post.comments?.count.shorten()
-//        shareCountLbl.text = post.shareCount.shorten()
-        
-  
         if let rection  = post.reaction, rection.reaction != 0{
+            print("Reactions is not null")
             self.selectedReaction = rection.reaction
-            updateReactionOnBtn(rection.reaction)
+           // updateReactionOnBtn(rection.reaction)
+            self.hideReactions()
+            self.reactionSetterView.alpha = 0
         }else{
+            
+            print("Reactions is  null")
             self.selectedReaction = 0
             self.resetAllRaeactions()
+            self.reactionSetterView.alpha = 1
         }
-      
+        
         self.captionLbl.text = post.description ?? ""
         let cellSize = self.contentView.frame
         let url = URL(string: post.result_video_url)!
         playerView.configure(url: url, fileExtension: "mov", size: (Int(cellSize.width), Int(cellSize.height)))
         
+        videoFinishedCompletion()
+    }
     
+    func videoFinishedCompletion(){
+        playerView.isVideoFinish = {[weak self] in
+            self?.isVideoFinish?()
+        }
     }
     
     func updateReactionOnBtn(_ reaction : Int){
@@ -184,7 +259,7 @@ class HomeTableViewCell: UITableViewCell {
             }
             
         case 5:
-        
+            
             print("reaction",reaction)
             if selectedReaction == 0{
                 self.treeBtnOutlet.alpha = 1
@@ -213,22 +288,15 @@ class HomeTableViewCell: UITableViewCell {
         
         switch reaction{
         case 1:
-    
             self.worldBtnOutlet.alpha = 0.7
         case 2:
             self.wheelBtnOutlet.alpha = 0.7
-            
         case 3:
             self.heartBtnOutlet.alpha = 0.7
         case 4:
-
             self.animalBtnOutlet.alpha = 0.7
         case 5:
-        
- 
             self.treeBtnOutlet.alpha = 0.7
-           
-            
         default:
             break
         }
@@ -247,10 +315,12 @@ class HomeTableViewCell: UITableViewCell {
         }
     }
     
+
+    
     func play() {
         if !isPlaying {
             playerView.play()
-           // musicLbl.holdScrolling = false
+            // musicLbl.holdScrolling = false
             isPlaying = true
         }
     }
@@ -258,7 +328,7 @@ class HomeTableViewCell: UITableViewCell {
     func pause(){
         if isPlaying {
             playerView.pause()
-           // musicLbl.holdScrolling = true
+            // musicLbl.holdScrolling = true
             isPlaying = false
         }
     }
@@ -286,7 +356,7 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     func resetViewsForReuse(){
-      
+        
         pauseImgView.alpha = 0
     }
     
@@ -298,7 +368,7 @@ class HomeTableViewCell: UITableViewCell {
             likeVideo()
         } else {
             liked = false
-          
+            
         }
         
     }
@@ -331,16 +401,10 @@ class HomeTableViewCell: UITableViewCell {
         })
         likeVideo()
     }
-    
-    
-    
-    @IBAction func comment(_ sender: Any) {
-       
-    }
-    
-    @IBAction func share(_ sender: Any) {
-        
-    }
+
+    @IBAction func comment(_ sender: Any) {}
+
+    @IBAction func share(_ sender: Any) {}
     
     @objc func navigateToProfilePage(){
         guard let post = post else { return }
@@ -349,3 +413,12 @@ class HomeTableViewCell: UITableViewCell {
     
     
 }
+
+
+//        nameBtn.setTitle("@" + post.autherName, for: .normal)
+//        nameBtn.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+//        musicLbl.text = post.music + "   " + post.music + "   " + post.music + "   "// Long enough to enable scrolling
+//        captionLbl.text = post.caption
+//        likeCountLbl.text = post.likeCount.shorten()
+//        //commentCountLbl.text = post.comments?.count.shorten()
+//        shareCountLbl.text = post.shareCount.shorten()

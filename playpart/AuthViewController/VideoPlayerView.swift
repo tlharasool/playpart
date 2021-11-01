@@ -31,6 +31,7 @@ class VideoPlayerView: UIView {
     private var fileExtension: String?
     
     var isReadyToPlay : (()->())?
+    var isVideoFinish : (()->())?
     
     // MARK: - Initializers
     override init(frame: CGRect) {
@@ -63,6 +64,14 @@ class VideoPlayerView: UIView {
         avPlayerLayer = AVPlayerLayer(player: queuePlayer)
         //avPlayerLayer.videoGravity = .resizeAspectFill
         self.layer.addSublayer(self.avPlayerLayer)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
+    }
+    
+    @objc func playerDidFinishPlaying(note: NSNotification) {
+        print("Video Finished")
+       // pause()
+        if let isVideoFinish = self.isVideoFinish{isVideoFinish()}
     }
     
     func configure(url: URL?, fileExtension: String?, size: (Int, Int)){
@@ -133,12 +142,12 @@ class VideoPlayerView: UIView {
             self?.loadingRequests.forEach { $0.finishLoading() }
             self?.loadingRequests.removeAll()
         }
-
     }
     
     
     func replay(){
         self.queuePlayer?.seek(to: .zero)
+        print("Replaying.....")
         play()
     }
     
@@ -169,9 +178,7 @@ extension VideoPlayerView {
             case .readyToPlay:
                 // Player item is ready to play.
                 print("Status: readyToPlay")
-                
                 if let isReadyToPlay = self.isReadyToPlay{isReadyToPlay()}
-                
                 
             case .failed:
                 // Player item failed. See error.
@@ -232,32 +239,32 @@ extension VideoPlayerView: URLSessionTaskDelegate, URLSessionDataDelegate {
     }
     
     private func isInfo(request: AVAssetResourceLoadingRequest) -> Bool {
-         return request.contentInformationRequest != nil
-     }
+        return request.contentInformationRequest != nil
+    }
     
     private func checkAndRespond(forRequest dataRequest: AVAssetResourceLoadingDataRequest) -> Bool {
         guard let videoData = videoData else { return false }
         let downloadedData = videoData
         let downloadedDataLength = Int64(downloadedData.count)
-
+        
         let requestRequestedOffset = dataRequest.requestedOffset
         let requestRequestedLength = Int64(dataRequest.requestedLength)
         let requestCurrentOffset = dataRequest.currentOffset
-
+        
         if downloadedDataLength < requestCurrentOffset {
             return false
         }
-
+        
         let downloadedUnreadDataLength = downloadedDataLength - requestCurrentOffset
         let requestUnreadDataLength = requestRequestedOffset + requestRequestedLength - requestCurrentOffset
         let respondDataLength = min(requestUnreadDataLength, downloadedUnreadDataLength)
-
+        
         dataRequest.respond(with: downloadedData.subdata(in: Range(NSMakeRange(Int(requestCurrentOffset), Int(respondDataLength)))!))
-
+        
         let requestEndOffset = requestRequestedOffset + requestRequestedLength
-
+        
         return requestCurrentOffset >= requestEndOffset
-
+        
     }
 }
 
@@ -272,7 +279,7 @@ extension VideoPlayerView: AVAssetResourceLoaderDelegate {
         self.loadingRequests.append(loadingRequest)
         return true
     }
-
+    
     func resourceLoader(_ resourceLoader: AVAssetResourceLoader, didCancel loadingRequest: AVAssetResourceLoadingRequest) {
         if let index = self.loadingRequests.firstIndex(of: loadingRequest) {
             self.loadingRequests.remove(at: index)

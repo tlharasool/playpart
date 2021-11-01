@@ -26,8 +26,6 @@ class PrivacyTableViewController: UITableViewController {
         self.staticTableViewCell1.backgroundColor = UIColor.black
         self.section2cell1.backgroundColor = UIColor.black
         self.section2cell2.backgroundColor = UIColor.black
-        
-        
     }
 }
 

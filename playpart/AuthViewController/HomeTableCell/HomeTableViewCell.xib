@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -122,6 +123,16 @@
                             <constraint firstAttribute="bottom" secondItem="rMA-Fh-cwF" secondAttribute="bottom" constant="70" id="zJU-4e-szE"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rw-y3-j8c">
+                        <rect key="frame" x="409" y="21" width="20" height="31"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="5Jv-Mj-UJY"/>
+                            <constraint firstAttribute="width" constant="20" id="q24-ar-WpT"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="ic_more-1"/>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
@@ -129,7 +140,9 @@
                     <constraint firstItem="qMX-Og-bIE" firstAttribute="leading" secondItem="5Iq-fc-U3y" secondAttribute="leadingMargin" constant="20" id="Idr-si-nFj"/>
                     <constraint firstItem="a07-L6-Euh" firstAttribute="leading" secondItem="5Iq-fc-U3y" secondAttribute="leadingMargin" id="Jbj-Oh-UAl"/>
                     <constraint firstAttribute="bottomMargin" secondItem="qMX-Og-bIE" secondAttribute="bottom" id="UfY-Dc-fKL"/>
+                    <constraint firstItem="6rw-y3-j8c" firstAttribute="top" secondItem="5Iq-fc-U3y" secondAttribute="top" constant="21" id="ey4-cR-GYc"/>
                     <constraint firstItem="a07-L6-Euh" firstAttribute="top" secondItem="Jsb-wM-T2P" secondAttribute="bottom" id="laB-G3-uzX"/>
+                    <constraint firstAttribute="trailing" secondItem="6rw-y3-j8c" secondAttribute="trailing" constant="20" symbolic="YES" id="nwT-AQ-YS2"/>
                     <constraint firstAttribute="trailing" secondItem="Jsb-wM-T2P" secondAttribute="trailing" constant="20" id="oVX-4A-72j"/>
                     <constraint firstItem="Jsb-wM-T2P" firstAttribute="leading" secondItem="5Iq-fc-U3y" secondAttribute="leading" constant="20" id="qGT-YU-bhs"/>
                     <constraint firstItem="wZy-U2-q1m" firstAttribute="centerX" secondItem="5Iq-fc-U3y" secondAttribute="centerX" id="qID-ib-MBl"/>
@@ -145,6 +158,8 @@
                 <outlet property="heartBtnOutlet" destination="jmH-K2-w9K" id="3s1-tP-1To"/>
                 <outlet property="nameBtn" destination="a07-L6-Euh" id="lLs-f7-Xbg"/>
                 <outlet property="pauseImgView" destination="wZy-U2-q1m" id="amw-Ky-JAe"/>
+                <outlet property="reactionSetterView" destination="qMX-Og-bIE" id="cTc-GC-Th2"/>
+                <outlet property="reportbtnOutlet" destination="6rw-y3-j8c" id="fJf-1f-jsz"/>
                 <outlet property="treeBtnOutlet" destination="Yan-UW-1sX" id="oaG-ML-mXh"/>
                 <outlet property="wheelBtnOutlet" destination="sOz-ty-78i" id="K0l-uJ-L4W"/>
                 <outlet property="worldBtnOutlet" destination="rMA-Fh-cwF" id="4lT-dh-BXT"/>
@@ -158,6 +173,7 @@
         <image name="btn_chair" width="54.5" height="54.5"/>
         <image name="btn_heart" width="40.5" height="40"/>
         <image name="btn_world" width="64" height="64"/>
+        <image name="ic_more-1" width="20" height="20"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
     </resources>
 </document>

@@ -33,6 +33,7 @@ class PlayerTableViewController: UITableViewController{
         super.viewWillAppear(animated)
         
     }
+ 
 }
 
 extension PlayerTableViewController{
@@ -51,7 +52,6 @@ extension PlayerTableViewController{
 extension PlayerTableViewController{
     
     func pauseVideo(){
-        
         if let cell = tableView.visibleCells.first as? HomeTableViewCell{
             if cell.playerView != nil{
                 cell.pause()
@@ -60,14 +60,46 @@ extension PlayerTableViewController{
     }
     
     func playVideo(){
-        
         if let cell = tableView.visibleCells.first as? HomeTableViewCell{
             if cell.playerView != nil{
                 cell.play()
             }
         }
     }
+}
+
+extension PlayerTableViewController{
     
+    func reactionHandler(reaction: Int, index: Int){
+        let obj =  self.data[index]
+        if let reactionObj = obj.reaction, reactionObj.reaction != 0{
+            print("Updaing...",reactionObj.reaction,"--",reaction)
+            obj.reaction?.reaction = reaction
+            self.apiHandler.updateNewReaction(reaction: reaction,reactionID: reactionObj.id) {
+                print("Updated Successfully")
+            } failure: { err in
+                print("Error in updating old reaction ")
+            }
+            
+        }else{
+            print("Adding new reaction")
+            self.apiHandler.setNewReaction(reaction: reaction,videoID: obj.id) {
+                print("Reaction Added successfully")
+                
+                
+            } failure: { err in
+                print("Error in updating new reaction ")
+            }
+//            if let cell = tableView.cellForRow(at: IndexPath(item: index, section: 0)) as? HomeTableViewCell{
+//                cell.hideReactions()
+//            }
+            obj.reaction?.reaction = reaction
+        }
+        
+        if let videoCell = tableView.cellForRow(at: IndexPath(row: index, section: 0)) as? HomeTableViewCell{
+            videoCell.hideReactions()
+        }
+    }
 }
 
 extension PlayerTableViewController{
@@ -112,7 +144,6 @@ extension PlayerTableViewController {
 // MARK: - Table View Extensions
 extension PlayerTableViewController {
     
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.data.count
     }
@@ -121,57 +152,17 @@ extension PlayerTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HomeTableViewCell
         cell.configure(post: data[indexPath.row])
         cell.tag = indexPath.row
-        cell.reactionHandler = { [weak self](reaction ,index) in
-            guard let self = self else {
-                return
-            }
-            
-            let obj =  self.data[index]
-            if let reactionObj = obj.reaction, reactionObj.reaction != 0{
-                print("Updaing...",reactionObj.reaction,"--",reaction)
-                obj.reaction?.reaction = reaction
-                self.apiHandler.updateNewReaction(reaction: reaction,reactionID: reactionObj.id) {
-                    print("Updated Successfully")
-                } failure: { err in
-                    print("Error in updating old reaction ")
-                }
-        
-            }else{
-                print("Adding new reaction")
-                self.apiHandler.setNewReaction(reaction: reaction,videoID: obj.id) {
-                print("Reaction Added successfully")
-                } failure: { err in
-                    print("Error in updating new reaction ")
-                }
-            
-                obj.reaction?.reaction = reaction
-            }
-          
-            
-            
-             
-
-
-//            if obj.reaction != 0{
-//
-//
-//            }else{
-//
-//            }
-            if let videoCell = tableView.cellForRow(at: IndexPath(row: index, section: 0)) as? HomeTableViewCell{
-                videoCell.updateReactionOnBtn(reaction)
-            }
-            
-            
-        }
-        
-    
+        cell.reportbtnOutlet.tag = indexPath.row
+       
+        cell.reportbtnOutlet.addTarget(self, action: #selector(showActionSheet(_:)), for: .touchUpInside)
+        cell.reactionHandler = self.reactionHandler
+    //    cell.isVideoFinish   = self.isVideoFinish
         cell.playerView.isReadyToPlay = {
-            
             if indexPath.row == 0{
                 cell.play()
             }
         }
+        
         return cell
     }
     
@@ -194,8 +185,74 @@ extension PlayerTableViewController {
         if let cell = cell as? HomeTableViewCell {
             print("didEndDisplaying")
             cell.pause()
+            
+//            if currentIndex > 0{
+//                print("Playing new video")
+//                cell.play()
+//            }
         }
     }
+}
+
+
+extension PlayerTableViewController  {
+    
+    func isVideoFinish(){
+        print("The current index when video finished",currentIndex)
+        
+        if (currentIndex == (data.count - 1)){
+            print("We are on the last video")
+    
+        }else{
+            
+            oldAndNewIndices.1 = currentIndex
+            currentIndex =  currentIndex + 1
+            let newIndex = currentIndex
+            tableView.scrollToRow(at: IndexPath(row: newIndex, section: 0), at: .bottom, animated: true)
+        }
+    }
+    
+}
+
+extension PlayerTableViewController  {
+
+    @objc func showActionSheet(_ sender : UIButton){
+    
+        let sheet = UIAlertController.init(title: "Are you sure?", message: "You want to perform this action", preferredStyle: .actionSheet)
+        
+        let blockAction = UIAlertAction(title: "Block", style: .default) { [weak self] action in
+            guard let self = self else {return}
+            let report = ReportTableViewController.instantiateViewController()
+            let vc = UINavigationController(rootViewController: report)
+            vc.modalPresentationStyle = .fullScreen
+            report.title = "Block User"
+            self.present(vc, animated: true, completion: nil)
+            
+        }
+        
+        let reportAction = UIAlertAction(title: "Report", style: .default) { [weak self] action in
+            guard let self = self else {return}
+            let report = ReportTableViewController.instantiateViewController()
+            let vc = UINavigationController(rootViewController: report)
+            vc.modalPresentationStyle = .fullScreen
+            report.title = "Report User"
+            self.present(vc, animated: true, completion: nil)
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [weak self] action in
+            guard let self = self else {return}
+            
+        }
+        sheet.addAction(blockAction)
+        sheet.addAction(reportAction)
+        sheet.addAction(cancelAction)
+        DispatchQueue.main.async {
+            self.present(sheet,animated: true,completion: nil)
+        }
+        
+    }
+    
 }
 
 // MARK: - ScrollView Extension
@@ -206,5 +263,6 @@ extension PlayerTableViewController  {
         let cell = self.tableView.cellForRow(at: IndexPath(row: self.currentIndex, section: 0)) as? HomeTableViewCell
         cell?.replay()
     }
+    
     
 }

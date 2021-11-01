@@ -10,23 +10,22 @@ import IQKeyboardManagerSwift
 
 class ViewController: UIViewController{
     
+    @IBOutlet weak var insertUsernameTxtFld: UITextField!
     @IBOutlet weak var insertNameTxtFld: UITextField!
     @IBOutlet weak var passwordFieldTxtFld: UITextField!
     @IBOutlet weak var repeatPasswordTxtFld: UITextField!
     @IBOutlet weak var insertView : UIView!
-    
     @IBOutlet weak var privacyLbl: UILabel!
     // let leftViewspace = leftView()
     
     let privacy_terms_text = "By tapping “Sign up”, you agree to our Terms of service and acknowledge that you have read our Privacy Policy and community guidelines"
-    
-    //
-    
+
     let apiHandler = API_Handler.shared
     private let primaryColor = AppColor.primaryColor
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureTextFields()
         configureTapGesture()
         setPrivacy_TermsLbl()
@@ -135,7 +134,7 @@ extension ViewController{
     
     func serverSide(){
         let loader =  self.loader()
-        let params = ["email" : insertNameTxtFld.text,"password" : passwordFieldTxtFld.text,"password_confirmation" : repeatPasswordTxtFld.text]
+        let params = ["email" : insertNameTxtFld.text,"password" : passwordFieldTxtFld.text,"password_confirmation" : repeatPasswordTxtFld.text,"username" : insertUsernameTxtFld.text]
         apiHandler.registerUser(parameters: params, success: {msg in
             self.stopLoader(loader: loader) {
                 DispatchQueue.main.async {
@@ -187,7 +186,7 @@ extension ViewController{
     }
     func checkEntities(){
         
-        if insertNameTxtFld.text == "" || passwordFieldTxtFld.text == "" || repeatPasswordTxtFld.text == ""{
+        if insertNameTxtFld.text == "" || passwordFieldTxtFld.text == "" || repeatPasswordTxtFld.text == "" || insertUsernameTxtFld.text == ""{
             let alert = UIAlertController(title: "Please fill all the manadatory fields.", message: "Please enter all the values.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {action in}))
             present(alert, animated: true)
@@ -285,6 +284,10 @@ extension ViewController{
     private func setInserNameTxtFldProperties(){
         insertNameTxtFld.setDefaultTextFieldProperties()
     }
+    
+    private func setInsertUsernameProperties(){
+        insertUsernameTxtFld.setDefaultTextFieldProperties()
+    }
     private func setrepeatPasswordTxtFldProperties(){
         repeatPasswordTxtFld.setDefaultTextFieldProperties()
     }
@@ -292,6 +295,7 @@ extension ViewController{
         passwordFieldTxtFld.setDefaultTextFieldProperties()
     }
     func setTxtFldProperties(){
+        setInsertUsernameProperties()
         setInserNameTxtFldProperties()
         setPasswordTxtFldProperties()
         setrepeatPasswordTxtFldProperties()

@@ -12,6 +12,10 @@
 		07FAA6C5270839F10027C816 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAA6C4270839F10027C816 /* SetPasswordViewController.swift */; };
 		07FAA6C727083A3A0027C816 /* SetNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAA6C627083A3A0027C816 /* SetNameViewController.swift */; };
 		53A52841680A0CFCE964E4F1 /* Pods_playpart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D906B694EC8694A064EF127D /* Pods_playpart.framework */; };
+		BC356960272C36EB007F0888 /* ReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC35695E272C36EB007F0888 /* ReportTableViewController.swift */; };
+		BC356963272C38B3007F0888 /* ReportSelectionViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC356962272C38B3007F0888 /* ReportSelectionViewDelegateDataSource.swift */; };
+		BC356966272C3C87007F0888 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC356964272C3C87007F0888 /* ReportTableViewCell.swift */; };
+		BC356967272C3C87007F0888 /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC356965272C3C87007F0888 /* ReportTableViewCell.xib */; };
 		BC509DDE270D838A004FA272 /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC509DDD270D838A004FA272 /* UIApplication + Extension.swift */; };
 		BC509DE0270D87A3004FA272 /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC509DDF270D87A3004FA272 /* View + Extension.swift */; };
 		BC509DE2270D87B5004FA272 /* Navigation + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC509DE1270D87B5004FA272 /* Navigation + Extension.swift */; };
@@ -68,6 +72,10 @@
 		07FAA6C4270839F10027C816 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
 		07FAA6C627083A3A0027C816 /* SetNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNameViewController.swift; sourceTree = "<group>"; };
 		451C9B6749D11D6902220E71 /* Pods-playpart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playpart.release.xcconfig"; path = "Target Support Files/Pods-playpart/Pods-playpart.release.xcconfig"; sourceTree = "<group>"; };
+		BC35695E272C36EB007F0888 /* ReportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewController.swift; sourceTree = "<group>"; };
+		BC356962272C38B3007F0888 /* ReportSelectionViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSelectionViewDelegateDataSource.swift; sourceTree = "<group>"; };
+		BC356964272C3C87007F0888 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		BC356965272C3C87007F0888 /* ReportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportTableViewCell.xib; sourceTree = "<group>"; };
 		BC509DDD270D838A004FA272 /* UIApplication + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
 		BC509DDF270D87A3004FA272 /* View + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
 		BC509DE1270D87B5004FA272 /* Navigation + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Navigation + Extension.swift"; sourceTree = "<group>"; };
@@ -191,12 +199,9 @@
 				E961C0DF26EF1E5E00C01F1E /* UISelectionViewController.swift */,
 				E9C1B74526EA094E0055885B /* ViewController.swift */,
 				E9981B3226F49E4000F429D4 /* LoginViewController.swift */,
-				BC813E96270305160051E577 /* PlayerViewController.swift */,
-				BCE4BF8B27107D0400AC4D1C /* PlayerTableViewController.swift */,
-				BCE4BF8D27107DC700AC4D1C /* HomeTableViewCell.swift */,
-				BCE4BF8E27107DC700AC4D1C /* HomeTableViewCell.xib */,
-				BC813EA5270306D00051E577 /* ShotTableViewCell.swift */,
-				BC813EA3270306C90051E577 /* ShotTableViewCell.xib */,
+				BCD731332727EB130012BBFC /* PlyerControllers */,
+				BCD731312727EAF70012BBFC /* HomeTableCell */,
+				BCD731322727EB040012BBFC /* ShotTableCell */,
 				07FAA6C02708399A0027C816 /* AccountTableViewController.swift */,
 				07FAA6C2270839C40027C816 /* PrivacyTableViewController.swift */,
 				07FAA6C4270839F10027C816 /* SetPasswordViewController.swift */,
@@ -207,6 +212,10 @@
 				BCCDB65A27109B5500AC484C /* PrivacyViewController.swift */,
 				BCCDB65B27109B5500AC484C /* PrivacyViewController.xib */,
 				BCCDB66027109C2400AC484C /* privacyPolicy.pdf */,
+				BC356964272C3C87007F0888 /* ReportTableViewCell.swift */,
+				BC356965272C3C87007F0888 /* ReportTableViewCell.xib */,
+				BC35695E272C36EB007F0888 /* ReportTableViewController.swift */,
+				BC356962272C38B3007F0888 /* ReportSelectionViewDelegateDataSource.swift */,
 			);
 			path = AuthViewController;
 			sourceTree = "<group>";
@@ -251,6 +260,33 @@
 				BC813E92270304D10051E577 /* ASvideoPlayerController.swift */,
 			);
 			path = VideosLibrary;
+			sourceTree = "<group>";
+		};
+		BCD731312727EAF70012BBFC /* HomeTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				BCE4BF8D27107DC700AC4D1C /* HomeTableViewCell.swift */,
+				BCE4BF8E27107DC700AC4D1C /* HomeTableViewCell.xib */,
+			);
+			path = HomeTableCell;
+			sourceTree = "<group>";
+		};
+		BCD731322727EB040012BBFC /* ShotTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				BC813EA5270306D00051E577 /* ShotTableViewCell.swift */,
+				BC813EA3270306C90051E577 /* ShotTableViewCell.xib */,
+			);
+			path = ShotTableCell;
+			sourceTree = "<group>";
+		};
+		BCD731332727EB130012BBFC /* PlyerControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC813E96270305160051E577 /* PlayerViewController.swift */,
+				BCE4BF8B27107D0400AC4D1C /* PlayerTableViewController.swift */,
+			);
+			path = PlyerControllers;
 			sourceTree = "<group>";
 		};
 		BCE4BF86271076AD00AC4D1C /* VideoCache */ = {
@@ -397,6 +433,7 @@
 				BCCDB66127109C2400AC484C /* privacyPolicy.pdf in Resources */,
 				BC813EA4270306C90051E577 /* ShotTableViewCell.xib in Resources */,
 				BCB65BF2270DCACA0085F315 /* Record.storyboard in Resources */,
+				BC356967272C3C87007F0888 /* ReportTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +507,7 @@
 				BCE4BF8F27107DC700AC4D1C /* HomeTableViewCell.swift in Sources */,
 				E9C1B74426EA094E0055885B /* SceneDelegate.swift in Sources */,
 				07FAA6C12708399A0027C816 /* AccountTableViewController.swift in Sources */,
+				BC356960272C36EB007F0888 /* ReportTableViewController.swift in Sources */,
 				E961C0E026EF1E5E00C01F1E /* UISelectionViewController.swift in Sources */,
 				BCB65BF6270DDCB00085F315 /* RecordVideoViewController.swift in Sources */,
 				E9891E3B26EB3AB90015A43A /* UITextFieldLeftView.swift in Sources */,
@@ -481,6 +519,8 @@
 				BC813E93270304D10051E577 /* ASVideoController.swift in Sources */,
 				E9981B3326F49E4000F429D4 /* LoginViewController.swift in Sources */,
 				BCCDB65C27109B5500AC484C /* PrivacyViewController.swift in Sources */,
+				BC356966272C3C87007F0888 /* ReportTableViewCell.swift in Sources */,
+				BC356963272C38B3007F0888 /* ReportSelectionViewDelegateDataSource.swift in Sources */,
 				BC813EA8270314C20051E577 /* StaticaTableView.swift in Sources */,
 				BCE4BF83271056D800AC4D1C /* CameraConfiguration.swift in Sources */,
 				BC813E97270305160051E577 /* PlayerViewController.swift in Sources */,
