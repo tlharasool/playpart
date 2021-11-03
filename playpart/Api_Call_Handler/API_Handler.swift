@@ -27,6 +27,7 @@ struct APIURL{
     static let reaction = "reactions"
     static let get_video_list = "videos/get_video_list"
     static let users = "users"
+    static let video_reports = "video_reports"
     
 }
 
@@ -35,6 +36,8 @@ class API_Handler{
     private init(){}
     static let shared = API_Handler()
     let loader = LoadingView()
+    
+
     
     func registerUser(parameters : [String : Any], success: @escaping(String) -> (), failure : @escaping (String) ->()){
         
@@ -120,6 +123,37 @@ class API_Handler{
 
 
 extension API_Handler{
+    
+    
+    func video_reports(parameters : [String : Any], success: @escaping ()->Void, failure : @escaping (String)->()){
+        
+        let url = APIURL.baseURL + APIURL.video_reports
+        let headers = getHeaders()
+        let parameter = parameters
+        
+        AF.request(url, method: .post, parameters: parameter, headers: [headers]).responseJSON { response in
+            debugPrint(response.result)
+            switch response.result{
+            case .success(let data):
+            
+                if let json  = data as? [String : Any]{
+                    
+                    guard let isSuccess  = json["success"] as? Bool, isSuccess == true else {
+                        failure("Unable to update password")
+                        return
+                    }
+                    success()
+                }else{
+                    failure("Unable to update password")
+                }
+            case .failure(let err):
+                print("Error is here",err)
+                failure(err.localizedDescription)
+            }
+            
+        }
+        
+    }
     
     
     func updatePassword(password : String, success: @escaping ()->Void, failure : @escaping (String)->()){

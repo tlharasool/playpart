@@ -19,6 +19,12 @@ class ReportTableViewController : UIViewController {
     
     //MARK:- Variables
     private var reportDatasource_Delegate : ReportSelectionViewDelegateDataSource!
+    let apiHandler = API_Handler.shared
+    var videoID : Int!
+    var indexPath : IndexPath!
+    
+    var getVideoIndexPath : ((IndexPath)->Void)?
+    
 }
 
 extension ReportTableViewController : StoryboardInitializable{
@@ -35,6 +41,27 @@ extension ReportTableViewController{
             self.showToast(message: "Please seleect one option", fontSize: 10)
         }else{
             print("Tapped on button",reportDatasource_Delegate.selectedReason)
+            let reason = reportDatasource_Delegate.selectedReason
+            let params : [String : Any] =  ["video_id" : videoID, "reason" : reason ]
+            let loader =  self.loader()
+            
+            apiHandler.video_reports(parameters: params) {
+                
+                self.stopLoader(loader: loader) {
+                    self.dismiss(animated: true, completion: { [self] in
+                        if let comp = self.getVideoIndexPath{
+                            comp(indexPath)
+                        }
+                    })
+                }
+            } failure: { err in
+                self.stopLoader(loader: loader) {
+                    self.showToast(message: err.capitalized, fontSize: 10)
+                }
+              
+            }
+            
+            
         }
         
     }
@@ -64,9 +91,7 @@ extension ReportTableViewController{
         super.viewWillLayoutSubviews()
         
     }
-    
 }
-
 
 extension ReportTableViewController{
     

@@ -18,7 +18,9 @@ class HomeTableViewCell: UITableViewCell {
     var playerView: VideoPlayerView!
     @IBOutlet weak var nameBtn: UIButton!
     @IBOutlet weak var captionLbl: UILabel!
-    @IBOutlet weak var reportbtnOutlet: UIButton!
+   // @IBOutlet weak var reportbtnOutlet: UIButton!
+    @IBOutlet weak var reportbtnView: UIView!
+    @IBOutlet weak var reportbtnImgView: UIView!
     
     // MARK:- Reaction Buttons.
     @IBOutlet weak var worldBtnOutlet  : UIButton!{
@@ -68,7 +70,9 @@ class HomeTableViewCell: UITableViewCell {
         
         contentView.addSubview(playerView)
         contentView.sendSubviewToBack(playerView)
-       
+        reportbtnView.backgroundColor = UIColor.clear
+        reportbtnView.isUserInteractionEnabled = true
+        reportbtnImgView.isUserInteractionEnabled = true
         let btn1Tag = Int.random(in: 21..<40)
         let btn2Tag = Int.random(in: 21..<40)
         let btn3Tag = Int.random(in: 21..<40)
@@ -126,8 +130,8 @@ class HomeTableViewCell: UITableViewCell {
         //
         //        pauseGesture.require(toFail: likeDoubleTapGesture)
         
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            self.reportbtnOutlet.setTitle("", for: .normal)
+        DispatchQueue.main.async {
+         //   self.reportbtnOutlet.setTitle("", for: .normal)
             //self.button.backgroundColor = .red
         }
     }
@@ -157,7 +161,7 @@ class HomeTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        reportbtnOutlet.titleLabel?.text = ""
+       // reportbtnOutlet.titleLabel?.text = ""
     }
     
     
@@ -187,7 +191,7 @@ class HomeTableViewCell: UITableViewCell {
         self.treeBtnOutlet.alpha = 0
         self.animalBtnOutlet.alpha = 0
         self.heartBtnOutlet.alpha = 0
-        self.reportbtnOutlet.alpha = 0
+       // self.reportbtnOutlet.alpha = 0
         self.reactionSetterView.alpha = 0
     }
     func configure(post: VideoData){
@@ -211,6 +215,11 @@ class HomeTableViewCell: UITableViewCell {
         let url = URL(string: post.result_video_url)!
         playerView.configure(url: url, fileExtension: "mov", size: (Int(cellSize.width), Int(cellSize.height)))
         
+        if let username = post.username{
+            let fullText = "@ \(username)"
+            nameBtn.setTitle(fullText, for: .normal)
+        }
+        nameBtn.isUserInteractionEnabled = false
         videoFinishedCompletion()
     }
     

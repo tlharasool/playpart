@@ -45,6 +45,7 @@ class VideoData
     let updated_at: TimeInterval
     let result_video_url: String
     let description: String
+    let username  : String?
     var reaction: Reaction!
     
     init(_ dictionary:[String: Any]){
@@ -55,6 +56,7 @@ class VideoData
         self.result_video_url = dictionary["result_video_url"] as? String ?? ""
         self.description = dictionary["description"] as? String ?? ""
         self.reaction = Reaction((dictionary["reaction"] as? [String : Any]) ?? [:])
+        self.username = dictionary["username"] as? String ?? ""
     }
 }
 

@@ -152,9 +152,15 @@ extension PlayerTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HomeTableViewCell
         cell.configure(post: data[indexPath.row])
         cell.tag = indexPath.row
-        cell.reportbtnOutlet.tag = indexPath.row
-       
-        cell.reportbtnOutlet.addTarget(self, action: #selector(showActionSheet(_:)), for: .touchUpInside)
+        //cell.reportbtnOutlet.tag = indexPath.row
+        cell.reportbtnView.tag = indexPath.row
+        cell.reportbtnImgView.tag = indexPath.row
+      
+        cell.reportbtnView.isUserInteractionEnabled = true
+        cell.reportbtnView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showActionSheet(_:))))
+        cell.reportbtnImgView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showActionSheet(_:))))
+        
+       // cell.reportbtnOutlet.addTarget(self, action: #selector(showActionSheet(_:)), for: .touchUpInside)
         cell.reactionHandler = self.reactionHandler
     //    cell.isVideoFinish   = self.isVideoFinish
         cell.playerView.isReadyToPlay = {
@@ -216,7 +222,15 @@ extension PlayerTableViewController  {
 
 extension PlayerTableViewController  {
 
-    @objc func showActionSheet(_ sender : UIButton){
+    func getVideoIndexPath(value : IndexPath){
+        print("reloading after deletion")
+        self.data.remove(at: value.row)
+        self.tableView.deleteRows(at: [value], with: .none)
+    
+     //   self.tableView.reloadSections(IndexSet(integer: 0), with: .none)
+    }
+    
+    @objc func showActionSheet(_ sender : UITapGestureRecognizer){
     
         let sheet = UIAlertController.init(title: "Are you sure?", message: "You want to perform this action", preferredStyle: .actionSheet)
         
@@ -226,6 +240,11 @@ extension PlayerTableViewController  {
             let vc = UINavigationController(rootViewController: report)
             vc.modalPresentationStyle = .fullScreen
             report.title = "Block User"
+            let tag = sender.view!.tag
+            let videoID = self.data[tag].id
+            report.videoID = videoID
+            report.indexPath = IndexPath(row: tag, section: 0)
+            report.getVideoIndexPath = self.getVideoIndexPath
             self.present(vc, animated: true, completion: nil)
             
         }
